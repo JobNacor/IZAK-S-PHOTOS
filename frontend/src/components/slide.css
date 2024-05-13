@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+/* slide.css */
+.my-work-section {
+    padding: 70px;
+    background-size: cover;
+    background-position: center;
+    color: white;  
+}
+
+.my-work-section img {
+    width: 100%;
+    transition: transform .5s ease;
+}
+
+.slick-slide {
+    padding: 50px 25px; /* Increased padding for space between slides */
+}
+
+.slick-active img {
+    transform: scale(1.1); /* Enlarges the active slide */
+}
+
+/* Custom styles for navigation buttons */
+.slick-prev,
+.slick-next {
+    z-index: 1;
+    background: #000; /* Black background for buttons */
+    border-radius: 50%; /* Circular buttons */
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.slick-prev:before,
+.slick-next:before {
+    font-size: 20px; /* Larger arrow icons */
+    color: #fff; /* White arrows */
+    opacity: 0.85;
+}
+
+h2{
+
+    font-size:4rem ;
+    margin-bottom: 25px;
+}
+
+p{
+    font-size: 1.5rem;
+    font-family:"Inter", sans-serif;
+    font-weight: 300;
+}
