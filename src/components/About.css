@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Abyssinica+SIL&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Junge&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+.about-section {
+    color: white;
+    background-color: black;
+    padding:  10% 0;
+}
+
+.about-section h1 {
+    font-family:'Junge', cursive;
+    font-size: 6rem;
+    margin-bottom: 30px;
+}
+
+.about-section p {
+    font-family:"Inter", sans-serif;
+    font-weight: 100;
+    font-size: 1.0rem;
+    line-height: 1.5;
+}
+
+.img-fluid{
+    margin-left: 5%;
+    margin-top: 8%;
+    
+}
+
+@media (max-width: 992px) {
+    .about-section .text-section {
+        margin-bottom: 30px;
+        
+    }
+}
+
+
+@media (max-width: 992px) {
+    .about-section  {
+        padding:  15% 0;
+    }
+}
+
+
+@media (max-width: 576px) {
+    .about-section  {
+        padding:  15% 0;
+    }
+}
+
+@media (max-width: 576px) {
+    .about-section h1 {
+        font-size: 3rem;
+    }
+
+    .about-section p {
+        font-size: 1rem;
+    }
+}
