@@ -1,0 +1,70 @@
+.banner {
+  padding: 100px;
+  margin-top: 15%;
+  margin: 120px;
+  background-position: center;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  text-align: left;
+  color: rgb(0, 0, 0);
+  font-family: 'roboto', sans-serif;
+  
+
+}
+
+
+  .content {
+    width: 80%; /* Aumenta el ancho del contenedor */
+    margin: 0 auto;
+    margin-right: 30%;
+    padding: 15px; /* Aumenta el espacio interno del contenedor */
+   
+    background-color: rgba(255, 255, 255, 0.100); /* Blanco semi-transparente */
+  
+  }
+  
+
+.content h1 {
+  color: black;
+  font-size: 4rem;
+  margin-bottom: 20px;
+  font-weight: 300;
+  text-shadow:2px 1px 1px rgb(255, 255, 255); 
+  font-weight: 300;
+  
+
+}
+
+.content p {
+  font-size: 1.2rem;
+  margin-bottom: 40px;
+  font-weight: 300;
+  width: 75%;
+  text-shadow: 1px 1px 1px rgb(255, 255, 255); 
+}
+
+.appointment-button {
+  background: black;
+  color: white;
+  padding: 14px 33px;
+  font-size: 16px;
+  border-radius: 25px;
+  transition: all 0.3s ease;
+  outline: none;
+  cursor: pointer;
+  border: none;
+}
+
+.appointment-button:hover {
+  background: white;
+  color: black;
+  transform: scale(1.05);
+  border: none;
+}
+
+.appointment-button:active {
+  transform: scale(1);
+}
