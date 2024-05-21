@@ -33,4 +33,5 @@ slick-carousel: The core library for creating responsive carousels. It provides 
 styled-components: A library for writing CSS-in-JS. It allows you to style React components using tagged template literals, providing a more dynamic and scoped way to apply styles.
 
 Other commands (Extra):
-1.Install Bootstrap: npm install react-bootstrap bootstrap 2.Install React with Vite: npm create vite@latest frontend -- --template react
+1.Install Bootstrap: npm install react-bootstrap bootstrap
+2.Install React with Vite: npm create vite@latest frontend -- --template react
