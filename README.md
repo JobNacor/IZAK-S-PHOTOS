@@ -1,7 +1,12 @@
-Clear instructions:
-1.Install project requirements: pip install -r requirements.txt 2.Activate the environment: env\Scripts\activate 3.Navigate to the frontend directory: cd frontend 4.Install npm packages: npm install 4.Start the project: npm run dev
+# Clear instructions:
 
-Dependencies:
+1. Install project requirements: pip install -r requirements.txt 
+2. Activate the environment: env\Scripts\activate 
+3. Navigate to the frontend directory: cd frontend 
+4. Install npm packages: npm install 
+5. Start the project: npm run dev
+
+## Dependencies:
 
 axios: A promise-based HTTP client for making requests to your backend API. It simplifies sending asynchronous HTTP requests to REST endpoints and performing CRUD operations.
 
