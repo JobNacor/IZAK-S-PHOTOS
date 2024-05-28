@@ -33,7 +33,7 @@ const Footer = () => {
           </ul>
         </div>
         <div className="footer-section">
-          <h2>CONTACT INFO</h2>
+          <h2>CONTACT INFO 🤙🏽</h2>
           <p>1234, Isaac Address</p>
           <p>1548 USA</p>
           <p>123 456 7890</p>
@@ -41,7 +41,7 @@ const Footer = () => {
         </div>
       </div>
       <div className="footer-bottom">
-        <p>Copyrights © 2023 ISAAC PHOTOS.com - All Rights Reserved.</p>
+        <p>Copyrights © 2024 ISAAC PHOTOS.com - All Rights Reserved.</p>
       </div>
     </div>
   );

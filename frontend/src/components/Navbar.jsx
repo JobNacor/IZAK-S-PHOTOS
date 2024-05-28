@@ -6,7 +6,7 @@ import '../assets/styles/Navbar.css';
 
 const NavigationBar = () => {
   return (
-    <Navbar expand="lg" className="custom-navbar">
+    <Navbar expand="lg" className="custom-navbar bg-transparent" >
       <Container>
         <Navbar.Brand as={Link} to="/">ISAAC'S PHOTOS</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />

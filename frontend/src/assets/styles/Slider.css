@@ -1,0 +1,73 @@
+/* src/assets/styles/Slider.css */
+@import url('https://fonts.googleapis.com/css2?family=Junge&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+.slider-wrapper {
+    position: relative;
+    max-width: 48rem;
+    margin: 0 auto;
+}
+
+.carousel-container {
+    position: center;
+    overflow: hidden;
+    padding: 30px;
+    padding-top: 50px;
+}
+
+.title{
+    text-align: center;
+    font-size: 3rem;
+    color: #fff;
+}
+
+.slider {
+    display: flex;
+    overflow: hidden;
+    aspect-ratio: 16/9;
+    border-radius: 10px;
+}
+
+.slider img {
+    flex: 1 0 100%;
+    display: none;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 1.5s ease;
+}
+
+img.displaySlide {
+    display: block;
+    opacity: 1;
+}
+
+.slider-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2rem;
+    padding: 10px 15px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    cursor: pointer;
+    z-index: 2; /* Ensure buttons are above images */
+}
+
+.slider-button.left {
+    left: 0;
+}
+
+.slider-button.right {
+    right: 0;
+}
+
+@keyframes fade {
+    from {
+    opacity: 0;
+    }
+    to {
+    opacity: 1;
+    }
+}
+
