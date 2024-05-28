@@ -14,12 +14,12 @@ import slide6 from '../assets/images/Slide/slide6.png';
 const LazyImage = lazy(() => import('./LazyImage'));
 
 const slideImages = [
-  { src: slide1, alt: 'Slide 1',   },
-  { src: slide2, alt: 'Slide 2',  },
-  { src: slide3, alt: 'Slide 3',  },
-  { src: slide4, alt: 'Slide 4',  },
-  { src: slide5, alt: 'Slide 5',  },
-  { src: slide6, alt: 'Slide 6',  },
+  { src: slide1, alt: 'Slide 1' },
+  { src: slide2, alt: 'Slide 2' },
+  { src: slide3, alt: 'Slide 3' },
+  { src: slide4, alt: 'Slide 4' },
+  { src: slide5, alt: 'Slide 5' },
+  { src: slide6, alt: 'Slide 6' },
 ];
 
 const Slide = () => {
@@ -36,16 +36,22 @@ const Slide = () => {
       {
         breakpoint: 1024,
         settings: {
-          slidesToShow: 2,
-        }
+          slidesToShow: 3,
+        },
       },
       {
-        breakpoint: 600,
+        breakpoint: 768,
         settings: {
-          slidesToShow: 1,
-        }
-      }
-    ]
+          slidesToShow: 3,
+        },
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 3,
+        },
+      },
+    ],
   };
 
   return (

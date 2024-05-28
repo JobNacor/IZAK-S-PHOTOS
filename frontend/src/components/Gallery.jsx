@@ -9,15 +9,12 @@ import image6 from "../assets/images/Gallery/gallery6.png";
 import Instagram from "../assets/images/Gallery/Instagram-logo.png";
 import Logo from "../assets/images/Gallery/logo.png";
 
-// Images array
 const images = [image1, image2, image3, image4, image5, image6];
 
-// Memoized LazyImage component
 const LazyImage = memo(({ src, alt }) => (
   <img src={src} alt={alt} loading="lazy" />
 ));
 
-// Memoized Gallery component
 const Gallery = () => {
   const [hoverIndex, setHoverIndex] = useState(null);
 

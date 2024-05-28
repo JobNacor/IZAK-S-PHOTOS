@@ -1,0 +1,93 @@
+/* App.css */
+@import '../../../node_modules/@fortawesome/fontawesome-free/css/all.min.css';
+/* contactForm.css */
+.contact-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    padding: 20px;
+    color: white;
+  }
+  
+  .contact-form-container {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 30px;
+    border-radius: 10px;
+    max-width: 500px;
+    width: 100%;
+    text-align: center;
+  }
+  
+  .contact-form-container h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .contact-form-container h2 span {
+    color: yellow;
+  }
+  
+  .contact-form-container p {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+  }
+  
+  .contact-info .info-item {
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+  }
+  
+  .contact-info .info-item i {
+    margin-right: 10px;
+  }
+  
+  /* Responsive styles */
+  @media (max-width: 768px) {
+    .contact-form-container h2 {
+      font-size: 2rem;
+    }
+  
+    .contact-form-container p {
+      font-size: 0.9rem;
+    }
+  
+    .send-button {
+      font-size: 1rem;
+      padding: 10px;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .contact-form-container h2 {
+      font-size: 1.8rem;
+    }
+  
+    .contact-form-container p {
+      font-size: 0.8rem;
+    }
+  
+    .send-button {
+      font-size: 0.9rem;
+      padding: 8px;
+    }
+  }
+  
+  @media (max-width: 400px) {
+    .contact-form-container h2 {
+      font-size: 1.6rem;
+    }
+  
+    .contact-form-container p {
+      font-size: 0.7rem;
+    }
+  
+    .send-button {
+      font-size: 0.8rem;
+      padding: 6px;
+    }
+  }
+  

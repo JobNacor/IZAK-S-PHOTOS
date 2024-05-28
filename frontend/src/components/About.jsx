@@ -13,7 +13,7 @@ const About = () => {
             <p>At the heart of our philosophy is a commitment to excellence and a genuine connection with our clients. We don’t just take pictures; we create visual experiences that resonate. From conceptualization to the final frame, we work closely with our clients, ensuring that their vision is not only realized but surpassed. Discover the artistry and professionalism that define [Your Photography Business Name], where each click tells a story, and every story is a masterpiece.</p>
           </div>
           <div className="col-lg-6 col-md-12">
-            <img src={Camera2} alt="Camera" className="img-fluid" />
+            <img src={Camera2} alt="Camera" className="img-fluid2" />
           </div>
         </div>
       </div>

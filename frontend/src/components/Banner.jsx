@@ -1,4 +1,3 @@
-// Asegúrate de que los imports están correctos
 import React, { memo } from 'react';
 import '../assets/styles/Banner.css';
 import backgroundImage from '../assets/images/Banner/banner.png';
@@ -32,6 +31,7 @@ const Banner = () => {
           Book Appointment
         </button>
       </div>
+      <div className="overlay"></div>
     </div>
   );
 };
