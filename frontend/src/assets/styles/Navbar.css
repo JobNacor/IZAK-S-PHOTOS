@@ -6,14 +6,16 @@
   font-style: normal;
 }
 
+
 .custom-navbar {
     background-color: #050505; 
     padding-bottom: 1%;
   }
+
   
   .custom-navbar .navbar-brand,
   .custom-navbar .nav-link {
-    font-size: 1.6rem; 
+    font-size: 2rem; 
     color: #ffffff; 
     margin-right: 30px;
   }
@@ -36,20 +38,53 @@
   color: #FFDA55; 
 }
 
-@media (max-width: 992px) {
-  .custom-navbar .navbar-brand,
+
+/* Adjust font sizes for smaller screens */
+@media (max-width: 1024px) {
+  .custom-navbar .navbar-brand {
+    font-size: 1.9rem;
+  }
   .custom-navbar .nav-link {
-      font-size: 1.2rem; 
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .custom-navbar 
+  .custom-navbar .nav-link {
+      font-size: 1rem; 
+  }
+
+  .navbar-brand{
+    font-size: 1.5rem;;
   }
 }
 
 
 @media (max-width: 576px) {
   .custom-navbar {
-      padding: 0.5%; 
+      padding: 0.10%; 
   .custom-navbar .navbar-brand,
   .custom-navbar .nav-link {
-      font-size: 1rem; 
+      font-size: 0.3rem; 
+  }
+
+  .navbar-brand{
+    font-size: 0.9rem;
+  
   }
 }
 }
+
+
+
+@media (max-width: 300px) {
+  .custom-navbar {
+      padding: 0.5%; 
+  .custom-navbar .navbar-brand,
+  .custom-navbar .nav-link {
+      font-size: 0.3rem; 
+  }
+}
+}
+

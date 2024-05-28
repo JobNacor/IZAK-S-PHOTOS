@@ -1,14 +1,15 @@
 .gallery-container {
     font-family: Arial, sans-serif;
     color: #000000;
-    max-width: 1200px;
+    max-width: 1400px;
     margin: 20px auto;
     text-align: center;
+    margin-top: 5%;
 }
 
 .header img {
-    width: 30%;
-    margin-bottom: 20px;
+    width: 35%;
+    margin-bottom: 50px;
 }
 
 .image-grid {
@@ -17,33 +18,26 @@
     gap: 10px;
 }
 
-.image-grid img {
-    width: 100%;
-    height: 500px;
-    object-fit: cover;
-}
-
-.image-grid img:nth-child(odd) {
-    height: 450px;
-}
-
-.image-grid img:nth-child(even) {
-    height: 250px;
-}
-
 .image-container {
     position: relative;
     cursor: pointer;
+    overflow: hidden; 
+    width: 100%;
 }
 
 .image-container img {
     width: 100%;
-    height: 300px;
+    height: 100%;
     object-fit: cover;
-    transition: opacity 0.3s ease;
+    transition: opacity 0.3s ease, filter 0.3s ease;
 }
 
-.image-container:hover .overlay {
+.image-container:hover img {
+    opacity: 0.7;
+    filter: blur(2px);
+}
+
+.image-container:hover .overlay-logo {
     opacity: 1;
 }
 
@@ -53,21 +47,73 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(0, 0, 0, 0.5);
     display: flex;
     align-items: center;
     justify-content: center;
     transition: opacity 0.3s ease;
     opacity: 0;
+    pointer-events: none; /* Para que el overlay no interfiera con los eventos de hover */
 }
 
 .overlay-logo {
     max-width: 30%;
     max-height: 27%;
+    opacity: 0; /* El logo debe ser transparente por defecto */
+    transition: opacity 0.3s ease;
+}
+
+@media (max-width: 900px) {
+    .image-container {
+        height: 100%; /* Ajuste para dispositivos medianos */
+    }
+}
+
+@media (max-width: 740px) {
+    .image-container {
+        height: 100%; /* Ajuste para dispositivos medianos */
+    }
+    .header img {
+
+        margin-bottom: 20px;
+    }
 }
 
 @media (max-width: 600px) {
+    .header img {
+        width: 50%;
+    }
+
     .image-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .image-container {
+        height:230px; 
+    }
+
+    .image-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 6px;
+    }
+}
+
+
+
+@media (max-width: 400px) {
+    .header img {
+        width: 40%;
+    }
+
+
+    .image-container {
+        height:130px; 
+       
+    }
+
+    .image-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 4px;
     }
 }

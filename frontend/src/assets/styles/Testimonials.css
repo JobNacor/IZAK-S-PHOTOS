@@ -10,16 +10,14 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-top: 5%;
 }
 
 .testimonials-section h2 {
-  font-size: 4.5rem;
+  font-size: 4rem;
   color: #fff;
 }
 
-.title {
-  margin-left: 2.5%;
-}
 
 .slider-container {
   width: 100%; 
@@ -41,7 +39,7 @@
 }
 
 .testimonial-info {
-  max-width: 80%;
+  max-width: 85%;
   background: rgba(0, 0, 0, 0.6);
   padding: 35px;
   border-radius: 10px;
@@ -51,7 +49,7 @@
   font-size: 1.3em;
   color: #fff;
   margin-top: 1rem;
-  margin-left: 5rem;
+  
 }
 
 .slick-prev:before,
@@ -62,60 +60,198 @@
 /* Media Queries for Responsive Design */
 
 /* Large devices (desktops, 1200px and up) */
-@media (max-width: 1200px) {
-  .testimonials-section h2 {
-    font-size: 3.5rem;
+@media (max-width: 1270px) {
+  
+  .testimonials-section{
+    padding: 70px;
+    width: 100%;
   }
-
-  .testimonial-info {
-    padding: 30px;
-  }
-
-  .testimonial-text {
-    font-size: 1.2em;
-    margin-left: 4rem;
-  }
-}
-
-/* Medium devices (tablets, 768px and up) */
-@media (max-width: 992px) {
   .testimonials-section h2 {
     font-size: 3rem;
   }
 
   .testimonial-info {
-    max-width: 90%;
-    padding: 25px;
+    padding: 30px;
+    max-width: 100%;
   }
 
   .testimonial-text {
-    font-size: 1.1em;
-    margin-left: 3rem;
+    font-size: 0.9em;
+    max-width: 100%;
+    
   }
+  .slider-container{
+    width: 75%;
+  }
+
 }
 
-/* Small devices (landscape phones, 576px and up) */
-@media (max-width: 768px) {
+@media (max-width: 1050px) {
+  
   .testimonials-section h2 {
-    font-size: 2.5rem;
+    font-size: 2rem;
+  }
+  .slider-container{
+    width: 75%;
+  }
+
+  .testimonials-section {
+
+    margin-top: -5%;
+    margin-bottom: -5%;
+}
+
+  .testimonial-info {
+    max-width: 100%;
+  }
+  .testimonial-text {
+    font-size: 0.9em;
+    max-width: 100%;
+    margin-top: -2%;
+  }
+
+}
+
+
+
+/* Small devices (landscape phones, 576px and up) */
+@media (max-width: 769px) {
+  .testimonials-section h2 {
+    font-size: 1.5rem;
     margin-left: 0;
   }
 
+  .testimonials-section {
+
+    margin-top: -5%;
+    margin-bottom: -5%;
+}
+  
   .testimonial-info {
-    max-width: 95%;
+    max-width: 100%;
     padding: 20px;
+    margin: auto;
   }
 
   .testimonial-text {
-    font-size: 1em;
-    margin-left: 2rem;
+    font-size: 0.6em;
+    margin-left: 1rem;
+    margin-top: -2%;
+    max-width: 100%;
+    margin: auto;
   }
 }
+
 
 /* Extra small devices (portrait phones, less than 576px) */
 @media (max-width: 576px) {
   .testimonials-section h2 {
-    font-size: 2rem;
+    font-size: 1.3rem;
+    margin-left: 0;
+  }
+
+  .testimonials-section {
+
+    margin-top: -10%;
+    margin-bottom: -10%;
+}
+
+  .testimonial-info {
+    max-width: 100%;
+    padding: 15px;
+  }
+
+  .testimonial-text {
+    font-size: 0.5em;
+    margin-left: 1rem;
+    margin: auto
+    
+  }
+}
+
+
+/* Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 450px) {
+  .testimonials-section h2 {
+    font-size: 1rem;
+    margin-left: 0;
+    
+  }
+
+  
+  .testimonials-section {
+
+    margin-top: -15%;
+    margin-bottom: -15%;
+}
+  .testimonial-info {
+    max-width: 100%;
+    padding: 15px;
+  }
+
+  .testimonial-text {
+    font-size: 0.4em;
+    margin-left: 1rem;
+    margin: auto
+    
+  }
+  .slick-prev,
+  .slick-next {
+    width: 20px; 
+    height: 20px; 
+  }
+
+  .slick-prev:before,
+  .slick-next:before {
+    font-size: 10px; /* Reducir el tamaño de los botones */
+  }
+}
+
+
+/* Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 450px) {
+  .testimonials-section h2 {
+    font-size: 1rem;
+    margin-left: 0;
+  }
+
+  
+  .testimonials-section {
+
+    margin-top: -20%;
+    margin-bottom: -20%;
+}
+
+  .testimonial-info {
+    max-width: 100%;
+    padding: 15px;
+  }
+
+  .testimonial-text {
+    font-size: 0.3em;
+    margin-left: 1rem;
+    margin: auto
+    
+  }
+
+  .slick-prev,
+  .slick-next {
+    width: 20px; 
+    height: 20px; 
+  }
+
+  .slick-prev:before,
+  .slick-next:before {
+    font-size: 10px; /* Reducir el tamaño de los botones */
+  }
+
+}
+
+
+/* Extra small devices (portrait phones, less than 360px) */
+@media (max-width: 360px) {
+  .testimonials-section h2 {
+    font-size: 0.8rem;
     margin-left: 0;
   }
 
@@ -125,7 +261,32 @@
   }
 
   .testimonial-text {
-    font-size: 0.9em;
+    font-size: 0.3em;
     margin-left: 1rem;
+    margin: auto;
+    max-width: 100%;
+    
   }
+
+  .slider-container{
+    width: 100%;
+  }
+
+  .slick-prev,
+  .slick-next {
+    width: 20px; 
+    height: 20px; 
+  }
+
+  .slick-prev:before,
+  .slick-next:before {
+    font-size: 10px; /* Reducir el tamaño de los botones */
+  }
+
+  
+  .testimonials-section {
+
+    margin-top: -30%;
+    margin-bottom: -22%;
+}
 }

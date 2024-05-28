@@ -6,12 +6,13 @@
     color: white;
     background-color: black;
     padding:  10% 0;
+    flex-wrap: nowrap; 
 }
 
 .about-section h1 {
     font-family:'Junge', cursive;
     font-size: 6rem;
-    margin-bottom: 30px;
+    margin-bottom: 30px
     
 }
 
@@ -23,38 +24,168 @@
 }
 
 .img-fluid{
-    margin-left: 5%;
-    margin-top: 30%;
+    margin-left: 0%;
+    margin-top: 20%;
     
+
 }
 
-@media (max-width: 992px) {
-    .about-section .text-section {
-        margin-bottom: 30px;
-        
+
+.img-fluid2{
+    margin-top: 23%;
+    max-width: 100%;
+
+}
+
+
+@media (max-width: 1400px) {
+
+    .img-fluid2{
+        margin-top: 26%;
     }
-}
 
-
-@media (max-width: 992px) {
-    .about-section  {
-        padding:  15% 0;
-    }
-}
-
-
-@media (max-width: 576px) {
-    .about-section  {
-        padding:  15% 0;
-    }
-}
-
-@media (max-width: 576px) {
     .about-section h1 {
-        font-size: 3rem;
+
+        font-size: 5.7rem;
     }
 
     .about-section p {
-        font-size: 1rem;
+
+        font-size: 1.1rem;
     }
 }
+
+
+
+@media (max-width: 1200px) {
+
+    .img-fluid2{
+        margin-top: 23%;
+        max-width: 100%;
+    }
+
+    .about-section h1 {
+        font-family:'Junge', cursive;
+        font-size: 4rem;
+        margin-bottom: 30px;
+        
+    }
+    
+    .about-section p {
+        font-family:"Inter", sans-serif;
+        font-weight: 100;
+        font-size: 0.9rem;
+        line-height: 1.5;
+    }
+    
+}
+
+
+@media (max-width: 1000px) {
+    
+   .img-fluid2{
+   display: none;
+
+   }
+    
+    
+    .about-section h1 {
+       
+        font-size: 3.5rem;
+       
+    }
+    
+    .about-section p {
+        font-size: 1rem;
+       
+    }
+}
+
+
+
+@media (max-width: 800px) {
+     
+
+    .about-section{
+
+        padding:  10% 3%;
+    }
+     .about-section h1 {
+        
+         font-size: 3rem;
+        
+     }
+     
+     .about-section p {
+         font-size: 0.8rem;
+        
+     }
+
+ }
+
+
+ 
+@media (max-width: 600px) {
+     
+
+    .about-section{
+
+        padding:  10% 12%;
+    }
+     .about-section h1 {
+        
+         font-size: 2rem;
+        
+     }
+     
+     .about-section p {
+         font-size: 0.6rem;
+         margin-top: -4%;
+        
+     }
+
+ }
+
+ 
+@media (max-width: 500px) {
+     
+
+    .about-section{
+
+        padding:  10% 12%;
+    }
+     .about-section h1 {
+        
+         font-size: 1.5rem;
+        
+     }
+     
+     .about-section p {
+         font-size: 0.5rem;
+         margin-top: -5%;
+        
+     }
+
+ }
+
+ 
+@media (max-width: 400px) {
+     
+
+    .about-section{
+
+        padding:  10% 12%;
+    }
+     .about-section h1 {
+        
+         font-size: 1.4rem;
+         
+        
+     }
+  
+     .about-section p {
+         font-size: 0.4rem;
+        margin-top: -5%;
+     }
+
+ }

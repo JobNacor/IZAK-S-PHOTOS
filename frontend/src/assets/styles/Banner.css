@@ -1,70 +1,253 @@
 .banner {
-  padding: 100px;
-  margin-top: 15%;
-  margin: 120px;
+  margin-top: 6%;
+  position: relative;
   background-position: center;
-  background-size: 100%;
+  background-size: cover;
   background-repeat: no-repeat;
   display: flex;
   align-items: flex-start;
   justify-content: flex-start;
   text-align: left;
+  min-height: vh;
   color: rgb(0, 0, 0);
-  font-family: 'roboto', sans-serif;
-  
+  font-family: 'Inter', sans-serif;
+
 
 }
 
 
+.overlay {
+  position: absolute;
+  top: 0%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.276);
+  z-index: 1;
+}
+
+@supports ((-webkit-backdrop-filter: blur(5px)) or (backdrop-filter: blur(5px))) {
+  .overlay {
+    -webkit-backdrop-filter: blur(5px); /* Para Safari */
+    backdrop-filter: blur(5px); /* Para navegadores compatibles */
+  }
+}
+
   .content {
-    width: 80%; /* Aumenta el ancho del contenedor */
-    margin: 0 auto;
-    margin-right: 30%;
-    padding: 15px; /* Aumenta el espacio interno del contenedor */
-   
-    background-color: rgba(255, 255, 255, 0.100); /* Blanco semi-transparente */
+    width: 100%; 
+    z-index: 2;
+    padding: 4rem;
   
   }
   
 
-.content h1 {
-  color: black;
-  font-size: 4rem;
-  margin-bottom: 20px;
-  font-weight: 300;
-  text-shadow:2px 1px 1px rgb(255, 255, 255); 
-  font-weight: 300;
+
+  .content h1 {
+    font-family: 'Junge', cursive;
+    font-size: 4rem;
+    margin-bottom: 20px;
+    text-shadow:1px 1px 1px rgb(255, 255, 255); 
+  }
   
+  .content p {
+    font-size: 1.5rem;
+    margin-bottom: 40px;
+    text-shadow:0.5px 0.5px 0.5px rgb(255, 255, 255); 
+    max-width: 70%;
+  }
+  
+  .appointment-button {
+    background: black;
+    color: white;
+    padding: 14px 33px;
+    font-size: 1rem;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+    outline: none;
+    cursor: pointer;
+    border: none;
+  }
+  
+  .appointment-button:hover {
+    background: white;
+    color: black;
+    transform: scale(1.05);
+    border: none;
+  }
+  
+  .appointment-button:active {
+    transform: scale(1);
+  }
 
-}
 
-.content p {
-  font-size: 1.2rem;
-  margin-bottom: 40px;
-  font-weight: 300;
-  width: 75%;
-  text-shadow: 1px 1px 1px rgb(255, 255, 255); 
-}
 
-.appointment-button {
-  background: black;
-  color: white;
-  padding: 14px 33px;
-  font-size: 16px;
-  border-radius: 25px;
-  transition: all 0.3s ease;
-  outline: none;
-  cursor: pointer;
-  border: none;
-}
+  @media (max-width: 1150px){
+    .content {
+      width: 100%; 
+      padding: 3%;
+    
+    }
 
-.appointment-button:hover {
-  background: white;
-  color: black;
-  transform: scale(1.05);
-  border: none;
-}
+    
+  .content h1 {
+    font-size: 3rem;
+  }
+  
+  .content p {
+    font-size: 1.2rem;
+  }
 
-.appointment-button:active {
-  transform: scale(1);
-}
+  
+  .appointment-button {
+    
+    padding: 14px 33px;
+    font-size: 1rem;
+    
+    
+  }
+
+  }
+
+  @media (max-width: 900px){
+    .content {
+      width: 100%; 
+      padding: 3%;
+    }
+
+    
+  .content h1 {
+    font-size: 2.3rem;
+  }
+  
+  .content p {
+    font-size: 1rem;
+  }
+
+  
+  .appointment-button {
+    
+    padding: 14px 33px;
+    font-size: 2vw;
+
+    
+  }
+
+  }
+
+  
+  @media (max-width: 750px){
+    .content {
+      width: 100%; 
+      padding: 3%;
+    }
+
+    
+  .content h1 {
+    font-size: 2.1rem;
+  }
+  
+  .content p {
+    font-size: 0.9rem;
+  }
+
+  }
+
+  @media (max-width: 630px){
+    .content {
+      width: 100%; 
+      padding: 3%;
+    }
+
+    
+  .content h1 {
+    font-size: 1.9rem;
+  }
+  
+  .content p {
+    font-size: 0.8rem;
+  }
+  .appointment-button{
+    font-size: 1.5vw;
+  }
+
+  }
+
+  
+  @media (max-width: 590px){
+    .content {
+      width: 100%; 
+      padding: 3%;
+    }
+
+    
+  .content h1 {
+    font-size: 1.7rem;
+  }
+  
+  .content p {
+    font-size: 0.7rem;
+  }
+
+  .appointment-button {
+padding: 6px 16px;
+font-size: 2vw;
+
+  }
+
+  }
+  @media (max-width: 590px){
+    .content {
+      width: 100%; 
+      padding: 3%;
+    }
+
+    
+  .content h1 {
+    font-size: 1.2rem;
+    margin-bottom: -0.1%;
+  }
+  
+  .content p {
+    margin-top: 3%;
+    font-size: 0.5rem;
+    margin-bottom: -0.1%;
+  }
+
+  .appointment-button {
+margin-top: 5%;
+padding: 6px 16px;
+font-size: 2vw;
+   
+    
+  }
+
+  }
+
+
+  
+  @media (max-width: 361px){
+    .content {
+      width: 100%; 
+      padding: 3%;
+    }
+
+    
+  .content h1 {
+    font-size: 1rem;
+    margin-bottom: -0.1%;
+  }
+  
+  .content p {
+    margin-top: 3%;
+    font-size: 0.5rem;
+    margin-bottom: -0.1%;
+  }
+
+  .appointment-button {
+margin-top: 5%;
+    padding: 6px 16px;
+    font-size: 2vw;
+    
+  }
+
+  }
