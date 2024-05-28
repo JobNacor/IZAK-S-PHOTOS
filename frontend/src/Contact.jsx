@@ -25,22 +25,22 @@ const ContactForm = memo(() => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    axios.post('http://localhost:8000/api/contact/', formData)
-      .then(response => {
-        setShowAlert(true);
-        setErrorMessage('');
-        setTimeout(() => setShowAlert(false), 3000);
-        setFormData({
-          name: '',
-          email: '',
-          phone: '',
-          service: ''
-        });
-      })
-      .catch(error => {
-        setErrorMessage('No se pudo enviar los datos. Inténtalo de nuevo más tarde.');
-        console.error('There was an error!', error);
-      });
+    axios.post('http://127.0.0.1:8000/api/contact/', formData)
+  .then(response => {
+    setShowAlert(true);
+    setErrorMessage('');
+    setTimeout(() => setShowAlert(false), 3000);
+    setFormData({
+      name: '',
+      email: '',
+      phone: '',
+      service: ''
+    });
+  })
+  .catch(error => {
+    setErrorMessage('No se pudo enviar los datos. Inténtalo de nuevo más tarde.');
+    console.error('There was an error!', error);
+  });
   };
 
   return (
