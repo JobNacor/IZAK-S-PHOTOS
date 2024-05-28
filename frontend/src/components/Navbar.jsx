@@ -14,7 +14,8 @@ const NavigationBar = () => {
             <Nav.Link as={Link} to="/" id='Home'>Home</Nav.Link>
             <Nav.Link as={Link} to="/portfolio">Portfolio</Nav.Link>
             <Nav.Link as={Link} to="/Contact">Contact</Nav.Link>
-            <Nav.Link href="#about">About Me</Nav.Link>
+            <Nav.Link as={Link} to="/About">About</Nav.Link>
+
           </Nav>
         </Navbar.Collapse>
       </Container>

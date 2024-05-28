@@ -2,6 +2,7 @@ import React, { useState, memo } from 'react';
 import { Form, Button, Container, Row, Col, Alert } from 'react-bootstrap';
 import './assets/styles/Contact.css';
 import backgroundImage from './assets/images/Contact/Camera5.png';
+import axios from 'axios';
 
 const ContactForm = memo(() => {
   const [formData, setFormData] = useState({
@@ -12,6 +13,7 @@ const ContactForm = memo(() => {
   });
 
   const [showAlert, setShowAlert] = useState(false);
+  const [errorMessage, setErrorMessage] = useState('');
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -23,14 +25,22 @@ const ContactForm = memo(() => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    setShowAlert(true);
-    setTimeout(() => setShowAlert(false), 3000);
-    setFormData({
-      name: '',
-      email: '',
-      phone: '',
-      service: ''
-    });
+    axios.post('http://localhost:8000/api/contact/', formData)
+      .then(response => {
+        setShowAlert(true);
+        setErrorMessage('');
+        setTimeout(() => setShowAlert(false), 3000);
+        setFormData({
+          name: '',
+          email: '',
+          phone: '',
+          service: ''
+        });
+      })
+      .catch(error => {
+        setErrorMessage('No se pudo enviar los datos. Inténtalo de nuevo más tarde.');
+        console.error('There was an error!', error);
+      });
   };
 
   return (
@@ -39,6 +49,7 @@ const ContactForm = memo(() => {
         <h2>Get in <span>Touch</span></h2>
         <p>Enim tempor eget pharetra facilisis sed maecenas adipiscing. Eu leo molestie vel, ornare non id blandit netus.</p>
         {showAlert && <Alert variant="success">Se ha enviado exitosamente y pronto nos contactaremos con usted.</Alert>}
+        {errorMessage && <Alert variant="danger">{errorMessage}</Alert>}
         <Form onSubmit={handleSubmit}>
           <Form.Group className="mb-3" controlId="formName">
             <Form.Control
