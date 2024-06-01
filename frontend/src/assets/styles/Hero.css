@@ -16,7 +16,6 @@
     background-size: 90%;
     background-position: top right;
     color: white;
-    min-height: 100vh;
     background-repeat: no-repeat;
 }
 
@@ -32,14 +31,14 @@
 }
 
 .hero-section .text-section {
-    padding: 11% 6.5%;
+    padding: 10% 5%;
     z-index: 1;
 
 }
 
 .principal{
     font-family:'Junge', cursive;
-    font-size: 6.0rem;
+    font-size: 7.0rem;
     
 }
 
@@ -48,17 +47,17 @@
     font-weight: 100;
     font-size: 1.2rem;
     margin-top: 0.5%;
-    max-width: 80%;
+    max-width: 90%;
 }
 
 
 .view {
     margin-top: 1rem;
-    font-size: 4vw; /* Ajuste con vw para hacerlo responsivo */
+    font-size: 2vw; 
     padding: 0.5rem 2rem;
     background-color: black;
     color: white;
-    border-radius: 30px; /* Botón ovalado */
+    border-radius: 30px; 
     cursor: pointer;
     transition: background-color 0.3s, transform 0.3s;
 }
@@ -70,43 +69,116 @@
 }
 
 
-@media (max-width: 992px) { /* Adjustments for tablets */
+
+
+@media (max-width: 1460px) { 
     .hero-section .text-section {
-        padding: 10% 3%;
+        padding: 13% 6%;
     }
     .principal {
-        font-size: 3.5rem;
+        font-size: 5.5rem;
     }
     .principal-text {
-        font-size: 90%;
+        font-size: 1rem;
+        max-width: 80%;
     }
     body {
         background-size: 70%;
         background-position: top right;
     }
     .view {
-        margin-top: 2rem;
+        margin-top: 1rem;
         font-size: 1.5vw; /* Ajuste con vw para mantener el tamaño relativo */
     }
 }
 
-@media (max-width: 576px) { /* Adjustments for mobile devices */
+
+@media (max-width: 1230px) { 
     .hero-section .text-section {
         padding: 10% 3%;
     }
     .principal {
-        font-size: 2.5rem;
+        font-size: 5.5rem;
     }
     .principal-text {
-        font-size: 80%;
-        max-width: 100%;
+        font-size: 1rem;
+        max-width: 80%;
     }
     body {
-        background-size: 150%;
+        background-size: 70%;
         background-position: top right;
     }
     .view {
-        margin-top: 2rem;
+        margin-top: 1rem;
         font-size: 1.5vw; /* Ajuste con vw para mantener el tamaño relativo */
     }
 }
+
+
+
+@media (max-width: 1050px) { 
+    .hero-section .text-section {
+        padding: 10% 5%;
+    }
+    .principal {
+        font-size: 4.5rem;
+    }
+    .principal-text {
+        font-size: 0.8rem;
+        max-width: 80%;
+    }
+    body {
+        background-size: 70%;
+        background-position: top right;
+    }
+    .view {
+        margin-top: 1rem;
+        font-size: 1.5vw; /* Ajuste con vw para mantener el tamaño relativo */
+    }
+}
+
+
+
+@media (max-width: 928px) { 
+    .hero-section .text-section {
+        padding: 10% 3%;
+    }
+    .principal {
+        font-size: 4rem;
+    }
+    .principal-text {
+        font-size: 0.8rem;
+        max-width: 90%;
+    }
+    body {
+        background-size: 70%;
+        background-position: top right;
+    }
+    .view {
+        margin-top: 0.5rem;
+        font-size: 1.5vw; /* Ajuste con vw para mantener el tamaño relativo */
+    }
+}
+
+
+
+@media (max-width: 775px) { 
+    .hero-section .text-section {
+        padding: 5% 3%;
+    }
+    .principal {
+        font-size: 3.5rem;
+    }
+    .principal-text {
+        font-size: 0.6rem;
+        max-width: 90%;
+    }
+    body {
+        background-size: 70%;
+        background-position: top right;
+    }
+    .view {
+        font-size: 1.5vw; /* Ajuste con vw para mantener el tamaño relativo */
+    }
+}
+
