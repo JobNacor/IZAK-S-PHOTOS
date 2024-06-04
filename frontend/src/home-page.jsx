@@ -5,7 +5,7 @@ import Hero from "./components/Hero";
 import About from "./components/About"
 import Slide from "./components/slide"
 import Testimonials from "./components/Testimonials";
-import Gallery from "./components/Gallery";
+import Instagram from "./components/Instagram";
 import Banner from "./components/Banner"
 import Footer from "./components/footer";
 
@@ -18,7 +18,7 @@ const App = () => {
       <About></About>
       <Slide></Slide>
       <Testimonials></Testimonials>
-      <Gallery></Gallery>
+      <Instagram></Instagram>
       <Banner></Banner>
       <Footer></Footer>
       

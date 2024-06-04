@@ -21,7 +21,7 @@
       font-weight: 600;
       text-transform: capitalize;
       line-height: 50px;
-      color: #b3b3b3; }
+      color: #f3f3f3; }
       
       @media (max-width: 1024px) {
         .section-title h2 {
@@ -62,13 +62,13 @@
         text-align: center; } }
     .single-service i {
       font-size: 36px;
-      color: #adadad;
+      color: #c9c9c9;
       -webkit-transition: all 0.3s ease 0s;
       -moz-transition: all 0.3s ease 0s;
       -o-transition: all 0.3s ease 0s;
       transition: all 0.3s ease 0s; }
     .single-service h4 {
-      color: #b0b0b0;
+      color: #e4e4e4;
       font-size: 21px;
       line-height: 27px; }
       .single-service h4 span {
@@ -78,7 +78,7 @@
             display: inline-block; } }
     .single-service p {
       margin-bottom: 0px;
-      color: #a8a8a8; }
+      color: #c9c9c9; }
       
     .single-service:hover {
       -webkit-transform: translateY(-6px);

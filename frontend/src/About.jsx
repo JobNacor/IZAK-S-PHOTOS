@@ -5,6 +5,7 @@ import Services from './components/services'
 
 
 
+
 const About = () => {
   
   return (
@@ -12,6 +13,7 @@ const About = () => {
       <About_hero />
       <Feature />
       <Services/>
+      
     </>
   );
 };

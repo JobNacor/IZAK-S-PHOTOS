@@ -5,9 +5,8 @@ import Drone from '../src/components/Drone';
 import Portrait from '../src/components/Portrait';
 import Products from '../src/components/Products';
 import Sports from '../src/components/Sports';
-import Gallery from '../src/components/Gallery';
+import Instagram from '../src/components/Instagram';
 import '../src/assets/styles/Slider.css';
-import '../src/assets/styles/Gallery.css';
 import Banner from './components/Banner';
 import Footer from './components/footer';
 import '../src/assets/styles/footer.css';
@@ -21,7 +20,7 @@ const Portfolio = () => {
       <Portrait />
       <Products />
       <Sports />
-      <Gallery />
+      <Instagram />
       <Banner />
       <Footer />
       
