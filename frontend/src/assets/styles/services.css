@@ -1,0 +1,94 @@
+
+
+.service-area {
+  margin-top: 10%;
+}
+
+  .section-title {
+    margin-bottom: 80px; }
+    @media (max-width: 991px) {
+      .section-title {
+        margin-bottom: 40px; } }
+    .section-title h3 {
+      font-weight: 300;
+      color: #d7d7d7;
+      font-size: 20px;
+      line-height: 18px;
+      text-transform: capitalize;
+      margin-bottom: 10px; }
+    .section-title h2 {
+      font-size: 45px;
+      font-weight: 600;
+      text-transform: capitalize;
+      line-height: 50px;
+      color: #b3b3b3; }
+      
+      @media (max-width: 1024px) {
+        .section-title h2 {
+          font-size: 40px; } }
+      @media (max-width: 1024px) {
+        .section-title h2 {
+          font-size: 30px;
+          line-height: 35px; } }
+      @media (max-width: 991px) {
+        .section-title h2 br {
+          display: none; } }
+      .section-title h2 span {
+        position: relative;
+        z-index: 10; }
+        
+
+
+  .service-area {
+    background: #000000;
+    padding-bottom: 120px; }
+    @media (max-width: 991px) {
+      .service-area {
+        padding-bottom: 50px; } }
+  
+  .single-service {
+    padding: 45px 39px;
+    background: #171717;
+    margin-bottom: 30px;
+    -webkit-transition: all 0.3s ease 0s;
+    -moz-transition: all 0.3s ease 0s;
+    -o-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s; }
+    @media (max-width: 1199px) {
+      .single-service {
+        padding: 30px 20px; } }
+    @media (max-width: 576px) {
+      .single-service {
+        text-align: center; } }
+    .single-service i {
+      font-size: 36px;
+      color: #adadad;
+      -webkit-transition: all 0.3s ease 0s;
+      -moz-transition: all 0.3s ease 0s;
+      -o-transition: all 0.3s ease 0s;
+      transition: all 0.3s ease 0s; }
+    .single-service h4 {
+      color: #b0b0b0;
+      font-size: 21px;
+      line-height: 27px; }
+      .single-service h4 span {
+        display: block; }
+        @media (max-width: 767px) {
+          .single-service h4 span {
+            display: inline-block; } }
+    .single-service p {
+      margin-bottom: 0px;
+      color: #a8a8a8; }
+      
+    .single-service:hover {
+      -webkit-transform: translateY(-6px);
+      -moz-transform: translateY(-6px);
+      -ms-transform: translateY(-6px);
+      -o-transform: translateY(-6px);
+      transform: translateY(-6px);
+      box-shadow: 0px 20px 30px rgba(255, 255, 255, 0.336); }
+  
+      .icon-spacing {
+        margin-right: 10px; 
+    }
+    

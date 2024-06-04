@@ -25,7 +25,7 @@ const Feature = () => {
           <div className="col-lg-4 col-md-6 pt-lg-5">
             <div className="fact-item dark-mode-item text-center h-100 p-5">
               <h1 className="display-2 text-primary mb-3">
-                {inView && <CountUp end={50} duration={2} prefix="+" />}
+                {inView && <CountUp end={50} duration={5} prefix="+" />}
               </h1>
               <h4 className="mb-3 text-light">Happy Clients</h4>
               <span className="text-light">Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo</span>
@@ -34,7 +34,7 @@ const Feature = () => {
           <div className="col-lg-4 col-md-6">
             <div className="fact-item dark-mode-item text-center h-100 p-5">
               <h1 className="display-2 text-primary mb-3">
-                {inView && <CountUp end={5} duration={4} prefix="+" />}
+                {inView && <CountUp end={5} duration={6} prefix="+" />}
               </h1>
               <h4 className="mb-3 text-light">Years Experience</h4>
               <span className="text-light">Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo</span>
@@ -43,7 +43,7 @@ const Feature = () => {
           <div className="col-lg-4 col-md-6 pt-lg-5">
             <div className="fact-item dark-mode-item text-center h-100 p-5">
               <h1 className="display-2 text-primary mb-3">
-                {inView && <CountUp end={500} duration={2} prefix="+" />}
+                {inView && <CountUp end={500} duration={5} prefix="+" />}
               </h1>
               <h4 className="mb-3 text-light">Portfolio Photos</h4>
               <span className="text-light">Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo</span>

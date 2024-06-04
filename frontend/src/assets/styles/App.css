@@ -2,3 +2,4 @@ body {
     background-color: rgb(0, 0, 0) !important;
   }
   
+  @import '@fortawesome/fontawesome-free/css/all.min.css';

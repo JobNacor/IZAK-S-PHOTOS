@@ -1,11 +1,12 @@
 /* Dark mode styles */
 .dark-mode {
-    background-color: #121212;
+    background-color: #000000;
     color: #ffffff;
+    margin-top: 10%;
   }
   
   .dark-mode-item {
-    background-color: #1f1f1f;
+    background-color: #151515;
     color: #ffffff;
     transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
   }
@@ -32,11 +33,11 @@
   }
   
   .text-light {
-    color: #e0e0e0 !important; /* Slightly off-white color for better contrast */
+    color: #e0e0e0 !important; 
   }
   
   .text-primary {
-    color: #bb86fc !important; /* A brighter color for primary text */
+    color: #bb86fc !important; 
   }
   
   /* Animate.css styles for fadeInUp */
@@ -48,4 +49,5 @@
     animation-delay: 10s;
     animation-fill-mode: both;
   }
+  
   
