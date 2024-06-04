@@ -1,14 +1,14 @@
 /* About-hero.css */
 
 
-body{
-  background-color: #ffffff !important; 
-}
+
 .slider-area {
   position: relative;
   height: 100vh;
   background-size: cover;
   background-position: center;
+  background-color: #ffffff !important; 
+  
 }
 
 .slider-item {
