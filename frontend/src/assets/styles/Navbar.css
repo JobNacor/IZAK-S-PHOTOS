@@ -6,38 +6,44 @@
   font-style: normal;
 }
 
-
 .custom-navbar {
-    background-color: #050505; 
-    padding-bottom: 1%;
-  }
+  background-color: rgba(0, 0, 0, 0); /* Totalmente transparente */
+  backdrop-filter: blur(0px); /* Difuminado para el fondo */
+  -webkit-backdrop-filter: blur(0px); /* Difuminado para Safari */
+  padding-bottom: 1%;
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+}
 
-  
-  .custom-navbar .navbar-brand,
-  .custom-navbar .nav-link {
-    font-size: 2rem; 
-    color: #ffffff; 
-    margin-right: 30px;
-  }
-  
-  .custom-navbar .nav-link {
-    font-family: 'Abyssinica SIL', serif; 
-    font-size: 1.6rem;
-    color: #ffffff;
-    margin-right: 30px;
-    font-weight: 400;
-    font-style: normal;
-  }
-  
+.custom-navbar .navbar-brand,
+.custom-navbar .nav-link {
+  font-size: 2rem;
+  color: #ffffff;
+  margin-right: 30px;
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.9); /* Sombra de texto más fuerte */
+  border-radius: 5px; /* Borde suave alrededor del texto */
+  padding: 6px 11px; /* Espaciado adicional alrededor del texto */
+}
+
+.custom-navbar .nav-link {
+  font-family: 'Abyssinica SIL', serif;
+  font-size: 1.6rem;
+  color: #ffffff;
+  margin-right: 30px;
+  font-weight: 400;
+  font-style: normal;
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.9); /* Sombra de texto más fuerte */
+}
+
 .custom-navbar .nav-link:hover,
 .custom-navbar .nav-link:focus {
-  color: #FFDA55; 
+  color: #FFDA55;
 }
 
 .custom-navbar .nav-link:active {
-  color: #FFDA55; 
+  color: #FFDA55;
 }
-
 
 /* Adjust font sizes for smaller screens */
 @media (max-width: 1024px) {
@@ -50,41 +56,33 @@
 }
 
 @media (max-width: 992px) {
-  .custom-navbar 
   .custom-navbar .nav-link {
-      font-size: 1rem; 
+    font-size: 1rem;
   }
-
-  .navbar-brand{
-    font-size: 1.5rem;;
+  .navbar-brand {
+    font-size: 1.5rem;
   }
 }
-
 
 @media (max-width: 576px) {
   .custom-navbar {
-      padding: 0.10%; 
+    padding: 0.10%;
+  }
   .custom-navbar .navbar-brand,
   .custom-navbar .nav-link {
-      font-size: 0.3rem; 
+    font-size: 0.3rem;
   }
-
-  .navbar-brand{
+  .navbar-brand {
     font-size: 0.9rem;
-  
   }
 }
-}
-
-
 
 @media (max-width: 300px) {
   .custom-navbar {
-      padding: 0.5%; 
+    padding: 0.5%;
+  }
   .custom-navbar .navbar-brand,
   .custom-navbar .nav-link {
-      font-size: 0.3rem; 
+    font-size: 0.3rem;
   }
 }
-}
-
