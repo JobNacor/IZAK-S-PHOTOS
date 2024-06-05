@@ -4,14 +4,15 @@ import styled from 'styled-components';
 const Container = styled.div`
   background-color: #000;
   color: #fff;
-  padding: 60px 40px;  // Increased padding
+  padding: 100px 60px;  // Increased padding
   min-height: 100vh;
 `;
 
 const Title = styled.h1`
-  text-align: center;
-  font-size: 3rem;
-  margin-bottom: 40px;
+  text-align: left;
+  font-size: 4.5rem;
+  margin-bottom: 70px;
+  margin-top: 5%; 
 `;
 
 const FaqContainer = styled.div`
@@ -44,7 +45,7 @@ const Question = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-size: 1.5rem;
+  font-size: 1.6rem;
 `;
 
 const Answer = styled.div`
@@ -82,7 +83,7 @@ const faqs = [
     answer: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum vestibulum.',
   },
   {
-    question: 'Are digital files included in your photography packages?',
+    question: 'Are digital files included in the packege?',
     answer: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum vestibulum.',
   },
   {
@@ -90,7 +91,7 @@ const faqs = [
     answer: 'Yes, prints are available for purchase. Explore the \'Prints\' section for more details on sizes and pricing.',
   },
   {
-    question: 'How long does it take to receive the edited photos after a session?',
+    question: 'How long does it take to receive the edited photos?',
     answer: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum vestibulum.',
   },
 ];

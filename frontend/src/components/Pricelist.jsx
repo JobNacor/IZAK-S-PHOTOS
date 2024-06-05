@@ -26,15 +26,29 @@ const Container = styled.div`
   animation: ${fadeInUp} 1s ease-out;
 `;
 
-const Title = styled.h1`
-  color: #fff;
-  font-size: 6rem;
-  margin-bottom: 40px;
-  text-align: center;
-  margin-top: 5%;
-  animation: ${fadeInUp} 1.5s ease-out;
+const neonAnimation = keyframes`
+  from {
+    text-shadow: 0 0 1px #fff, 0 0 5px #fff, 0 0 0px #ff4d00, 0 0 0px #ff4d00, 0 0 0px #ff4d00, 0 0 6px #ff4d00, 0 0 1px #ff4d00;
+  }
+  to {
+    text-shadow: 0 0 1px #fff, 0 0 5px #ff4d00, 0 0 5px #ff4d00, 0 0 1px #ff4d00, 0 0 0px #ff4d00, 0 0 1px #ff4d00, 0 0 1px #ff4d00;
+  }
 `;
 
+const goldText = keyframes`
+  0% { color: #ffd700; }
+  50% { color: #ffec80; }
+  100% { color: #ffd700; }
+`;
+
+const Title = styled.h1`
+  color: #ffd700; /* Color dorado */
+  font-size: 7rem;
+  margin-bottom: 40px;
+  text-align: center;
+  margin-top: 3%;
+  animation: ${fadeInUp} 1.5s ease-out, ${goldText} 2s infinite alternate, ${neonAnimation} 2s infinite alternate;
+`;
 const Card = styled.div`
   background: #111;
   color: #fff;
