@@ -1,73 +1,301 @@
-/* src/assets/styles/Slider.css */
-@import url('https://fonts.googleapis.com/css2?family=Junge&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
-
-.slider-wrapper {
-    position: relative;
-    max-width: 48rem;
-    margin: 0 auto;
+.info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    flex-wrap: wrap; /* Ensure it wraps on smaller screens */
 }
 
-.carousel-container {
-    position: center;
-    overflow: hidden;
-    padding: 30px;
-    padding-top: 50px;
+.left {
+    flex: 2;
+    text-align: left;
+    font-size: 30px; /* Adjust the font size as needed */
+    margin-left: 30px;
+    margin-top: 70px;
+    margin-bottom: 50px;
 }
 
-.title{
+.right {
+    flex: 2;
+    text-align: right;
+    font-size: 10px; /* Adjust the font size as needed */
+    margin-right: 30px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.portfolio {
     text-align: center;
-    font-size: 3rem;
-    color: #fff;
+    overflow: hidden;
 }
 
 .slider {
+    width: 100%;
     display: flex;
+    justify-content: center;
+    align-items: center;
     overflow: hidden;
-    aspect-ratio: 16/9;
-    border-radius: 10px;
 }
 
-.slider img {
-    flex: 1 0 100%;
-    display: none;
+.slide {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 100%;
+}
+
+.slide.transition {
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide img {
+    width: 100%;
+    height: 80vh; /* Adjusted for larger images */
     object-fit: cover;
-    opacity: 0;
-    transition: opacity 1.5s ease;
+    flex-shrink: 0;
 }
 
-img.displaySlide {
-    display: block;
-    opacity: 1;
+.navigation {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.slider-button {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 2rem;
-    padding: 10px 15px;
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
+.nav-arrow {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.page-indicator {
+    margin: 0 20px;
+    font-size: 18px;
+    color: azure;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .info {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .left, .right {
+        text-align: left;
+        margin-left: 20px;
+        margin-right: 20px;
+        font-size: 20px; /* Adjust font size for smaller screens */
+    }
+
+    .right {
+        margin-top: 20px; /* Add some space between elements */
+    }
+
+    .page-indicator {
+        font-size: 14px; /* Adjust font size for smaller screens */
+    }
+}
+
+/* Gallery side*/
+.portfolio {
+    text-align: center;
+    overflow: hidden;
+  }
+  
+  .slider {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+  }
+  
+  .slide {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 100%;
+  }
+  
+  .slide.transition {
+    transition: transform 0.5s ease-in-out;
+  }
+  
+  .slide img {
+    width: 100%;
+    height: 80vh; /* Adjusted for larger images */
+    object-fit: cover;
+    flex-shrink: 0;
+  }
+  
+  .navigation {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .nav-arrow {
+    background: none;
     border: none;
     cursor: pointer;
-    z-index: 2; /* Ensure buttons are above images */
-}
-
-.slider-button.left {
-    left: 0;
-}
-
-.slider-button.right {
-    right: 0;
-}
-
-@keyframes fade {
-    from {
-    opacity: 0;
+    padding: 0 10px; /* Add some padding for better click area */
+  }
+  
+  .nav-arrow .arrow-left::before,
+  .nav-arrow .arrow-right::before {
+    content: '';
+    display: inline-block;
+    width: 30px;
+    height: 2px;
+    background-color: black; /* Adjust the color as needed */
+    position: relative;
+  }
+  
+  .nav-arrow .arrow-left::before {
+    transform: rotate(45deg);
+    left: 10px;
+  }
+  
+  .nav-arrow .arrow-left::after {
+    content: '';
+    display: inline-block;
+    width: 30px;
+    height: 2px;
+    background-color: black; /* Adjust the color as needed */
+    position: relative;
+    left: -20px;
+    top: -6px;
+    transform: rotate(-45deg);
+  }
+  
+  .nav-arrow .arrow-right::before {
+    transform: rotate(-45deg);
+    right: 10px;
+  }
+  
+  .nav-arrow .arrow-right::after {
+    content: '';
+    display: inline-block;
+    width: 30px;
+    height: 2px;
+    background-color: black; /* Adjust the color as needed */
+    position: relative;
+    right: -20px;
+    top: -6px;
+    transform: rotate(45deg);
+  }
+  
+  .page-indicator {
+    margin: 0 20px;
+    font-size: 18px;
+    color: azure;
+  }
+  
+  .info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    flex-wrap: wrap; /* Ensure it wraps on smaller screens */
+  }
+  
+  .left {
+    flex: 2;
+    text-align: left;
+    font-size: 30px; /* Adjust the font size as needed */
+    margin-left: 30px;
+    margin-top: 70px;
+    margin-bottom: 50px;
+  }
+  
+  .right {
+    flex: 2;
+    text-align: right;
+    font-size: 10px; /* Adjust the font size as needed */
+    margin-right: 30px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+  
+  .portfolio-section {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    text-align: center;
+    color: azure;
+    background-color: rgba(9, 8, 8, 1);
+    padding-top: 45px;
+    padding-bottom: 45px;
+  }
+  
+  .portfolio-section h2 {
+    margin-bottom: 20px;
+    margin-top: 20px;
+    font-size: 2rem;
+  }
+  
+  .portfolio-grid {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap; /* Make it responsive by wrapping */
+  }
+  
+  .portfolio-item {
+    flex: 1;
+    max-width: 300px;
+    transition: transform 0.3s ease; /* Add transition for smooth animation */
+  }
+  
+  .portfolio-item img {
+    width: 90%;
+    height: auto;
+    padding: 20px;
+  }
+  
+  .portfolio-item p {
+    margin-top: 10px;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+  }
+  
+  /* Zoom-out effect */
+  .portfolio-item:hover {
+    transform: scale(0.95);
+  }
+  
+  /* Responsive styles */
+  @media (max-width: 1200px) {
+    .portfolio-item {
+      max-width: 250px;
     }
-    to {
-    opacity: 1;
+  }
+  
+  @media (max-width: 768px) {
+    .portfolio-item {
+      max-width: 200px;
     }
-}
-
+  
+    .portfolio-section h2 {
+      font-size: 1.5rem;
+    }
+  
+    .portfolio-item p {
+      font-size: 1rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .portfolio-item {
+      max-width: 150px;
+    }
+  
+    .portfolio-section h2 {
+      font-size: 1.2rem;
+    }
+  
+    .portfolio-item p {
+      font-size: 0.9rem;
+    }
+  }
+  

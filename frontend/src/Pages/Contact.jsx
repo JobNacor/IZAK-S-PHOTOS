@@ -1,7 +1,7 @@
 import React, { useState, memo } from 'react';
 import { Form, Button, Container, Row, Col, Alert } from 'react-bootstrap';
-import './assets/styles/Contact.css';
-import backgroundImage from './assets/images/Contact/Camera5.png';
+import '../assets/styles/Contact.css';
+import backgroundImage from '../assets/images/Contact/Camera5.png';
 import axios from 'axios';
 
 const ContactForm = memo(() => {
@@ -46,7 +46,7 @@ const ContactForm = memo(() => {
   return (
     <div className="contact-section" style={{ backgroundImage: `url(${backgroundImage})` }}>
       <Container className="contact-form-container">
-        <h2>Get in <span>Touch</span></h2>
+        <h2>Get in <span>Touch!</span></h2>
         <p>Enim tempor eget pharetra facilisis sed maecenas adipiscing. Eu leo molestie vel, ornare non id blandit netus.</p>
         {showAlert && <Alert variant="success">Se ha enviado exitosamente y pronto nos contactaremos con usted.</Alert>}
         {errorMessage && <Alert variant="danger">{errorMessage}</Alert>}
