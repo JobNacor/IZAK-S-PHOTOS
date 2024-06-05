@@ -1,53 +1,70 @@
-/* Dark mode styles */
+@import url('https://fonts.googleapis.com/css2?family=Abyssinica+SIL&display=swap');
+@font-face {
+  font-family: 'MiFuente';
+  src: url('../fonts/AbyssinicaSIL-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 .dark-mode {
-    background-color: #000000;
-    color: #ffffff;
-    margin-top: 10%;
-  }
-  
-  .dark-mode-item {
-    background-color: #151515;
-    color: #ffffff;
-    transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
-  }
-  
-  .dark-mode-item:hover {
-    background-color: #ffffff !important;
-    color: #000000 !important;
-    box-shadow: 0 0 45px rgba(0, 0, 0, 0.1);
-  }
-  
-  .dark-mode-item:hover h1,
-  .dark-mode-item:hover h4,
-  .dark-mode-item:hover span {
-    color: #000000 !important;
-  }
-  
-  /* Ensure text inside the container changes to black on hover */
-  .fact-item {
-    transition: margin-top 0.3s;
-  }
-  
-  .fact-item:hover {
-    margin-top: -10px;
-  }
-  
-  .text-light {
-    color: #e0e0e0 !important; 
-  }
-  
-  .text-primary {
-    color: #bb86fc !important; 
-  }
-  
-  /* Animate.css styles for fadeInUp */
-  @import 'https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css';
-  
-  /* Custom animation on scroll */
-  .container.animate__animated.animate__fadeInUp {
-    animation-duration: 10s;
-    animation-delay: 10s;
-    animation-fill-mode: both;
-  }
-  
-  
+  background-color: #000000;
+  color: #ffffff;
+  margin-top: 13%;
+}
+
+.dark-mode-item {
+  background-color: #151515;
+  color: #ffffff;
+  transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
+}
+
+.dark-mode-item:hover {
+  background-color: #ffffff !important;
+  color: #000000 !important;
+  box-shadow: 0 0 45px rgba(0, 0, 0, 0.1);
+}
+
+.dark-mode-item:hover h1,
+.dark-mode-item:hover h4,
+.dark-mode-item:hover span {
+  color: #000000 !important;
+}
+
+.fact-item {
+  transition: margin-top 0.3s;
+}
+
+.fact-item:hover {
+  margin-top: -10px;
+}
+
+.text-light {
+  color: #e0e0e0 !important; 
+}
+
+.text-primary {
+  color: #f1bd03 !important; 
+}
+
+/* Larger font sizes for titles */
+.text-uppercase {
+  font-size: 2rem; /* Increased font size */
+}
+
+.display-4 {
+  font-size: 4rem; /* Increased font size for main title */
+}
+
+.display-1 {
+  font-size: 5rem; /* Larger font size for the counts */
+}
+
+/* Animate.css styles for fadeInUp */
+@import 'https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css';
+
+/* Custom animation on scroll */
+.container.animate__animated.animate__fadeInUp {
+  animation-duration: 10s;
+  animation-delay: 10s;
+  animation-fill-mode: both;
+}

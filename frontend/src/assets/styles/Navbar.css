@@ -11,7 +11,7 @@
   backdrop-filter: blur(0px); /* Difuminado para el fondo */
   -webkit-backdrop-filter: blur(0px); /* Difuminado para Safari */
   padding-bottom: 1%;
-  position: fixed;
+  position: top;
   width: 100%;
   z-index: 1000;
 }

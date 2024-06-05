@@ -1,7 +1,18 @@
 // App.js
 import React from 'react';
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 import { useMediaQuery } from 'react-responsive';
+
+const fadeInUp = keyframes`
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+`;
 
 const Container = styled.div`
   display: flex;
@@ -11,35 +22,36 @@ const Container = styled.div`
   @media(min-width: 768px) {
     flex-direction: row;
     justify-content: center;
-    
   }
+  animation: ${fadeInUp} 1s ease-out;
 `;
 
 const Title = styled.h1`
   color: #fff;
-  font-size: 5rem;
+  font-size: 6rem;
   margin-bottom: 40px;
   text-align: center;
-  margin-top: 10%;
+  margin-top: 5%;
+  animation: ${fadeInUp} 1.5s ease-out;
 `;
 
 const Card = styled.div`
-  background: #000;
+  background: #111;
   color: #fff;
-  border: 2px solid #fff;
-  border-radius: 10px;
+  border: 2px solid gold;
+  border-radius: 15px;
   margin: 20px;
   padding: 40px;
   text-align: center;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 8px rgba(255, 215, 0, 0.2);
   width: 100%;
   max-width: 400px;
-  height: 600px; /* Adjusted height */
+  height: auto;
   transition: transform 0.3s, box-shadow 0.3s;
-  
+
   &:hover {
     transform: translateY(-10px);
-    box-shadow: 0 8px 16px rgba(255, 255, 255, 0.3); /* Adjusted shadow */
+    box-shadow: 0 8px 16px rgba(255, 215, 0, 0.5);
   }
 
   @media(min-width: 768px) {
@@ -49,12 +61,14 @@ const Card = styled.div`
 
 const CardTitle = styled.h2`
   margin-bottom: 20px;
-  font-size: 2.5rem;
+  font-size: 3rem;
+  color: gold;
 `;
 
 const Price = styled.p`
-  font-size: 2.7rem;
-  margin: 20px 0 40px; /* Added margin for more space */
+  font-size: 3rem;
+  margin: 20px 0 40px;
+  color: gold;
 `;
 
 const FeatureList = styled.div`
@@ -62,11 +76,12 @@ const FeatureList = styled.div`
   justify-content: space-between;
   text-align: left;
   margin: 10px 0;
-  font-size: 1.4rem;
+  font-size: 1.6rem;
 `;
 
 const Feature = styled.div`
   flex: 1;
+  color: #fff;
   &:first-child {
     text-align: left;
   }
@@ -76,19 +91,20 @@ const Feature = styled.div`
 `;
 
 const Button = styled.button`
-  background-color: transparent;
-  color: #fff;
-  border: 2px solid #fff;
-  padding: 20px 40px; /* Increased padding */
-  margin-top: 70px; /* More margin to push it down */
+  background-color: gold;
+  color: #000;
+  border: none;
+  padding: 15px 30px;
+  margin-top: 30px;
   cursor: pointer;
   border-radius: 5px;
-  transition: background-color 0.3s, transform 0.3s;
-  font-size: 1.5rem; /* Increased font size */
+  transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+  font-size: 1.5rem;
 
   &:hover {
-    background-color: #555;
-    transform: scale(1.1);
+    background-color: #ffd700;
+    transform: scale(1.05);
+    box-shadow: 5 10 50px rgba(255, 215, 0, 0.7);
   }
 `;
 

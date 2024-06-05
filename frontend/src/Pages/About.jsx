@@ -7,6 +7,7 @@ import Pricelist from '../components/Pricelist';
 import FAQ from '../components/FAQ';
 import Footer from '../components/footer'
 import Banner from '../components/Banner'
+import Slide from '../components/slide'
 
 const About = () => {
   
@@ -15,9 +16,9 @@ const About = () => {
       <About_hero />
       <Feature />
       <Services/>
-      <Gallery></Gallery>
       <Pricelist></Pricelist>
       <FAQ></FAQ>
+      <Slide></Slide>
       <Banner></Banner>
       <Footer></Footer>
     </>
