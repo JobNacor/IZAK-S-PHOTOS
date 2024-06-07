@@ -12,6 +12,9 @@
     "start-django": " ../env/Scripts/activate cd/backend && ../env/Scripts/activate && python manage.py runserver"
   },
   "dependencies": {
+    "@fontsource/cinzel": "^5.0.13",
+    "@fontsource/lora": "^5.0.17",
+    "@fontsource/oswald": "^5.0.20",
     "@fortawesome/fontawesome-free": "^6.5.2",
     "@fortawesome/fontawesome-svg-core": "^6.5.2",
     "@fortawesome/free-solid-svg-icons": "^6.5.2",

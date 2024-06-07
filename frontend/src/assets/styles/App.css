@@ -1,12 +1,47 @@
+@font-face {
+  font-family: 'Neaments';
+  src: url('../fonts/Neaments.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Allura';
+  src: url('../fonts/Allura-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'BALQIS';
+  src: url('../fonts/BALQIS.ttf') format('truetype');
+}
+
+
+@font-face {
+  font-family: 'coves-bold';
+  src: url('../fonts/Coves-Bold.otf') format('truetype');
+}
+
+@font-face {
+  font-family: 'coves-light';
+  src: url('../fonts/Coves-Light.otf') format('truetype');
+}
+
+
+@font-face {
+  font-family: 'GoudyBookletter1911';
+  src: url('../fonts/GoudyBookletter1911-Regular.ttf') format('truetype');
+}
+
+
+@font-face {
+  font-family: 'Olivia';
+  src: url('../fonts/Olivia-Regular.otf') format('truetype');
+}
+
+
+@font-face {
+  font-family: 'Lovelyn';
+  src: url('../fonts/Lovelyn.ttf') format('truetype');
+}
+
 body {
     background-color: rgb(0, 0, 0) !important;
   }
-
-@import "@fontsource/great-vibes";
-@import "@fontsource/dancing-script";
-@import "@fontsource/helvetica";
-@import "@fontsource/bebas-neue";
-@import "@fontsource/lora";
-@import "@fontsource/cinzel";
-@import "@fontsource/oswald";
-
