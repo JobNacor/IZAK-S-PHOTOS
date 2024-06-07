@@ -1,12 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Abyssinica+SIL&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Junge&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
-@font-face {
-    font-family: 'MiFuente';
-    src: url('../fonts/AbyssinicaSIL-Regular.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-  }
+
 
   .hero-section {
     position: relative;

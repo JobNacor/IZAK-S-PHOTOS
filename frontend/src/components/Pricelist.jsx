@@ -94,7 +94,8 @@ const FeatureList = styled.div`
 `;
 
 const Feature = styled.div`
-  flex: 1;
+  max-width: 100%;
+flex: 1;
   color: #fff;
   &:first-child {
     text-align: left;
@@ -133,19 +134,19 @@ const Pricelist = () => {
           <CardTitle>STANDARD</CardTitle>
           <Price>400$</Price>
           <FeatureList>
-            <Feature>Duration:</Feature>
+            <Feature>Duration</Feature>
             <Feature>3 hours</Feature>
           </FeatureList>
           <FeatureList>
-            <Feature>Lots Of Photos:</Feature>
+            <Feature>Photos</Feature>
             <Feature>60 - 80</Feature>
           </FeatureList>
           <FeatureList>
-            <Feature>Retouching:</Feature>
+            <Feature>Retouching</Feature>
             <Feature>25 items</Feature>
           </FeatureList>
           <FeatureList>
-            <Feature>Finishing:</Feature>
+            <Feature>Finishing</Feature>
             <Feature>10 days</Feature>
           </FeatureList>
           <Button>Book Appointment</Button>
@@ -154,19 +155,19 @@ const Pricelist = () => {
           <CardTitle>PREMIUM</CardTitle>
           <Price>550$</Price>
           <FeatureList>
-            <Feature>Duration:</Feature>
+            <Feature>Duration</Feature>
             <Feature>4 hours</Feature>
           </FeatureList>
           <FeatureList>
-            <Feature>Lots Of Photos:</Feature>
+            <Feature>Photos</Feature>
             <Feature>85 - 90</Feature>
           </FeatureList>
           <FeatureList>
-            <Feature>Retouching:</Feature>
+            <Feature>Retouching</Feature>
             <Feature>40 items</Feature>
           </FeatureList>
           <FeatureList>
-            <Feature>Finishing:</Feature>
+            <Feature>Finishing</Feature>
             <Feature>7 days</Feature>
           </FeatureList>
           <Button>Book Appointment</Button>
@@ -175,19 +176,19 @@ const Pricelist = () => {
           <CardTitle>PRO</CardTitle>
           <Price>600$</Price>
           <FeatureList>
-            <Feature>Duration:</Feature>
+            <Feature>Duration</Feature>
             <Feature>6 hours</Feature>
           </FeatureList>
           <FeatureList>
-            <Feature>Lots Of Photos:</Feature>
+            <Feature>Photos</Feature>
             <Feature>unlimited</Feature>
           </FeatureList>
           <FeatureList>
-            <Feature>Retouching:</Feature>
+            <Feature>Retouching</Feature>
             <Feature>unlimited</Feature>
           </FeatureList>
           <FeatureList>
-            <Feature>Finishing:</Feature>
+            <Feature>Finishing</Feature>
             <Feature>3 days</Feature>
           </FeatureList>
           <Button>Book Appointment</Button>

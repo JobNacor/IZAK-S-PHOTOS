@@ -47,7 +47,7 @@ const ContactForm = memo(() => {
     <div className="contact-section" style={{ backgroundImage: `url(${backgroundImage})` }}>
       <Container className="contact-form-container">
         <h2>Get in <span>Touch!</span></h2>
-        <p>Enim tempor eget pharetra facilisis sed maecenas adipiscing. Eu leo molestie vel, ornare non id blandit netus.</p>
+        <p>Enim tempor eget pharetra facilisis sed maecenas adipiscing. Eu leo molestie vel.</p>
         {showAlert && <Alert variant="success">Se ha enviado exitosamente y pronto nos contactaremos con usted.</Alert>}
         {errorMessage && <Alert variant="danger">{errorMessage}</Alert>}
         <Form onSubmit={handleSubmit}>
@@ -95,18 +95,20 @@ const ContactForm = memo(() => {
               <option value="premium">Premium $800</option>
             </Form.Control>
           </Form.Group>
-          <Button variant="warning" type="submit" className="send-button">SEND</Button>
+          <div className="d-flex justify-content-center align-items-center">
+            <div className="contact-info">
+              <div className="info-item">
+                <i className="fas fa-phone-alt"></i>
+                <span>03 5432 1234</span>
+              </div>
+              <Button variant="warning" type="submit" className="send-button mx-2">SEND</Button>
+              <div className="info-item">
+                <i className="fas fa-envelope"></i>
+                <span>isaac@gmail.com</span>
+              </div>
+            </div>
+          </div>
         </Form>
-        <Row className="contact-info mt-3">
-          <Col className="info-item">
-            <i className="fas fa-phone-alt"></i>
-            <span>03 5432 1234</span>
-          </Col>
-          <Col className="info-item">
-            <i className="fas fa-envelope"></i>
-            <span>isaac@gmail.com</span>
-          </Col>
-        </Row>
       </Container>
     </div>
   );

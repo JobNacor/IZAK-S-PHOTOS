@@ -16,7 +16,7 @@
     background: rgba(0, 0, 0, 0); /* Adjust the opacity as needed */
     padding: 30px;
     border-radius: 10px;
-    max-width: 500px;
+    max-width: 600px; /* Increased max-width */
     width: 100%;
     text-align: center;
     position: relative;
@@ -24,7 +24,7 @@
 }
 
 .contact-form-container h2 {
-    font-size: 55px;
+    font-size: 4.5rem; /* Larger font size */
     margin-bottom: 1rem;
 }
 
@@ -33,7 +33,7 @@
 }
 
 .contact-form-container p {
-    font-size: 1rem;
+    font-size: 1.2rem; /* Larger font size */
     margin-bottom: 2rem;
 }
 
@@ -45,20 +45,28 @@
     font-size: 25px;
     cursor: pointer;
     border-radius: none;
+    align-items: center;
+  
+}
+
+.contact-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
 }
 
 .contact-info .info-item {
     display: flex;
     align-items: center;
-    font-size: 15px;
+    font-size: 20px; /* Increased font size */
+    margin: 0 10px; /* Added margin between items */
 }
 
 .contact-info .info-item i {
     margin-right: 10px;
-    padding-left: 40px;
 }
 
-/* Opaque bottom section */
 .contact-form-container::after {
     content: "";
     position: absolute;
@@ -72,7 +80,6 @@
     z-index: -1;
 }
 
-/* Make the form inputs transparent */
 .contact-form-container .form-control {
     background: rgba(255, 255, 255, 0.1); /* Adjust opacity for better visibility */
     color: #fff;
@@ -92,45 +99,57 @@
 /* Responsive styles */
 @media (max-width: 768px) {
     .contact-form-container h2 {
-        font-size: 2rem;
+        font-size: 3rem; /* Adjusted font size */
     }
 
     .contact-form-container p {
-        font-size: 0.9rem;
+        font-size: 1rem; /* Adjusted font size */
     }
 
     .send-button {
-        font-size: 1rem;
-        padding: 10px;
+        font-size: 1.5rem; /* Adjusted font size */
+        padding: 10px 20px; /* Adjusted padding */
+    }
+
+    .contact-info .info-item {
+        font-size: 1rem; /* Adjusted font size */
     }
 }
 
 @media (max-width: 576px) {
     .contact-form-container h2 {
-        font-size: 1.8rem;
+        font-size: 2.5rem; /* Adjusted font size */
     }
 
     .contact-form-container p {
-        font-size: 0.8rem;
+        font-size: 0.9rem; /* Adjusted font size */
     }
 
     .send-button {
-        font-size: 0.9rem;
-        padding: 8px;
+        font-size: 1rem; /* Adjusted font size */
+        padding: 8px 16px; /* Adjusted padding */
+    }
+
+    .contact-info .info-item {
+        font-size: 0.9rem; /* Adjusted font size */
     }
 }
 
 @media (max-width: 400px) {
     .contact-form-container h2 {
-        font-size: 1.6rem;
+        font-size: 2rem; /* Adjusted font size */
     }
 
     .contact-form-container p {
-        font-size: 0.7rem;
+        font-size: 0.8rem; /* Adjusted font size */
     }
 
     .send-button {
-        font-size: 0.8rem;
-        padding: 6px;
+        font-size: 0.8rem; /* Adjusted font size */
+        padding: 6px 12px; /* Adjusted padding */
+    }
+
+    .contact-info .info-item {
+        font-size: 0.8rem; /* Adjusted font size */
     }
 }
