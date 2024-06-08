@@ -1,5 +1,5 @@
 .service-area {
-  margin-top: 10%;
+  margin-top: 5%;
 }
 
 .section-title {
@@ -17,6 +17,7 @@
   line-height: 28px;
   text-transform: capitalize;
   margin-bottom: 10px; 
+  font-family: Pro-text;
 }
 .section-title h2 {
   font-size: 60px; /* Increased font size */
@@ -24,6 +25,7 @@
   text-transform: capitalize;
   line-height: 70px; /* Increased line height */
   color: #f3f3f3; 
+  font-family: Pro-text;
 }
 @media (max-width: 1024px) {
   .section-title h2 {
@@ -81,6 +83,7 @@
   color: #e4e4e4;
   font-size: 28px; /* Increased font size */
   line-height: 35px; /* Increased line height */
+  font-family: Pro-text;
 }
 .single-service h4 span {
   display: block; 
@@ -93,6 +96,7 @@
 .single-service p {
   margin-bottom: 0px;
   color: #c9c9c9; 
+  font-family:Poppings-light ;
 }
 
 .single-service:hover {

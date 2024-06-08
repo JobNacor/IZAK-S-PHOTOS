@@ -43,7 +43,7 @@
 }
 
 .text-primary {
-  color: #f1bd03 !important; 
+  color: #fff48e !important; 
 }
 
 /* Larger font sizes for titles */
@@ -53,10 +53,12 @@
 
 .display-4 {
   font-size: 4rem; /* Increased font size for main title */
+ 
 }
 
 .display-1 {
   font-size: 5rem; /* Larger font size for the counts */
+  
 }
 
 /* Animate.css styles for fadeInUp */

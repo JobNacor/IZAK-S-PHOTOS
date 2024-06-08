@@ -8,54 +8,53 @@
   align-items: flex-start;
   justify-content: flex-start;
   text-align: left;
-  min-height: vh;
   color: rgb(0, 0, 0);
   font-family: 'Inter', sans-serif;
-
-
+  
 }
 
-
-.overlay {
+.banner::before {
+  content: '';
   position: absolute;
-  top: 0%;
+  top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(255, 255, 255, 0.276);
-  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.3); 
+  z-index: 1; 
+  filter: blur(5px);
+  
 }
 
-@supports ((-webkit-backdrop-filter: blur(5px)) or (backdrop-filter: blur(5px))) {
-  .overlay {
-    -webkit-backdrop-filter: blur(5px); /* Para Safari */
-    backdrop-filter: blur(5px); /* Para navegadores compatibles */
-  }
+.banner > * {
+  position: relative;
+  z-index: 2; /* Asegúrate de que el contenido esté por encima de la capa oscura */
 }
 
-  .content {
-    width: 100%; 
-    z-index: 2;
-    padding: 4rem;
+.content {
+  width: 100%;
+  z-index: 2;
+  padding: 4rem;
+  color: white; /* Asegurar el color del texto es blanco */
   
-  }
-  
+}
 
-
-  .content h1 {
-    font-family: 'Pro-text', cursive;
-    font-size: 4rem;
-    margin-bottom: 20px;
-    text-shadow:1px 1px 1px rgb(255, 255, 255); 
-  }
+.content h1 {
+  font-family: 'Pro-text', cursive;
+  font-size: 4rem;
+  margin-bottom: 20px;
+  text-shadow: 20px 0px 15px rgba(0, 0, 0, 0.7); /* Sombras más fuertes para el texto */
   
-  .content p {
-    font-size: 1.5rem;
-    margin-bottom: 40px;
-    text-shadow:0.5px 0.5px 0.5px rgb(255, 255, 255); 
-    max-width: 70%;
-    font-family: Poppings-light;
-  }
+}
+
+.content p {
+  font-size: 1.5rem;
+  margin-bottom: 40px;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7); /* Sombras más fuertes para el texto */
+  max-width: 70%;
+  font-family: 'Poppins', sans-serif; /* Corrección en el nombre de la fuente */
+  font-weight: 300;
+}
   
   .appointment-button {
     background: black;

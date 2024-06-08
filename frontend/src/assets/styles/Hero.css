@@ -38,9 +38,9 @@
     -webkit-text-fill-color: transparent;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Sombra del texto */
     position: relative;
-    filter: brightness(1.5);
+    filter: brightness(2);
     line-height: 1.1; /* Ajusta la altura de línea */
-    letter-spacing: 3px;
+    letter-spacing: 5px;
 }
 
 .principal-text{

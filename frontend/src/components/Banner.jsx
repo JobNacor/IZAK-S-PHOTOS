@@ -19,6 +19,7 @@ const Banner = () => {
 
   return (
     <div className="banner" style={{ backgroundImage: `url(${backgroundImage})` }}>
+      <div className="overlay"></div>
       <div className="content">
         <h1>Capturing The Best Moments For You</h1>
         <p>Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit, Sed Do Eiusmod Tempor Incididunt Ut Labore Et Dolore Magna Aliqua.</p>
@@ -31,7 +32,6 @@ const Banner = () => {
           Book Appointment
         </button>
       </div>
-      <div className="overlay"></div>
     </div>
   );
 };

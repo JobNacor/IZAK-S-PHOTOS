@@ -2,6 +2,7 @@
 import React from 'react';
 import styled, { keyframes } from 'styled-components';
 import { useMediaQuery } from 'react-responsive';
+import ProText from '../assets/fonts/Pro-text.ttf'
 
 const fadeInUp = keyframes`
   0% {
@@ -46,8 +47,9 @@ const Title = styled.h1`
   font-size: 7rem;
   margin-bottom: 40px;
   text-align: center;
-  margin-top: 3%;
+  margin-top: 0%;
   animation: ${fadeInUp} 1.5s ease-out, ${goldText} 2s infinite alternate, ${neonAnimation} 2s infinite alternate;
+
 `;
 const Card = styled.div`
   background: #111;
