@@ -1,12 +1,4 @@
-@font-face {
-  font-family: 'Neaments';
-  src: url('../fonts/Neaments.ttf') format('truetype');
-}
 
-@font-face {
-  font-family: 'Allura';
-  src: url('../fonts/Allura-Regular.ttf') format('truetype');
-}
 
 @font-face {
   font-family: 'BALQIS';
@@ -15,31 +7,40 @@
 
 
 @font-face {
-  font-family: 'coves-bold';
-  src: url('../fonts/Coves-Bold.otf') format('truetype');
-}
-
-@font-face {
-  font-family: 'coves-light';
-  src: url('../fonts/Coves-Light.otf') format('truetype');
+  font-family: 'Pro-text';
+  src: url('../fonts/Pro-text.ttf') format('truetype');
 }
 
 
+
 @font-face {
-  font-family: 'GoudyBookletter1911';
-  src: url('../fonts/GoudyBookletter1911-Regular.ttf') format('truetype');
+  font-family: 'Sf-light';
+  src: url('../fonts/sf-dispay-light.OTF') format('truetype');
 }
 
 
+
 @font-face {
-  font-family: 'Olivia';
-  src: url('../fonts/Olivia-Regular.otf') format('truetype');
+  font-family: 'Poppings-regular';
+  src: url('../fonts/Poppins-Regular.ttf') format('truetype');
 }
 
 
 @font-face {
-  font-family: 'Lovelyn';
-  src: url('../fonts/Lovelyn.ttf') format('truetype');
+  font-family: 'Poppings-semibold';
+  src: url('../fonts/Poppins-SemiBold.ttf') format('truetype');
+}
+
+
+@font-face {
+  font-family: 'Poppings-light';
+  src: url('../fonts/Poppins-Light.ttf') format('truetype');
+}
+
+
+@font-face {
+  font-family: 'Poppings-extra';
+  src: url('../fonts/Poppins-ExtraLight.ttf') format('truetype');
 }
 
 body {

@@ -1,15 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Abyssinica+SIL&display=swap');
-@font-face {
-  font-family: 'MiFuente';
-  src: url('../fonts/AbyssinicaSIL-Regular.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-}
 
 .custom-navbar {
-  background-color: rgba(0, 0, 0, 0); /* Totalmente transparente */
-  backdrop-filter: blur(0px); /* Difuminado para el fondo */
-  -webkit-backdrop-filter: blur(0px); /* Difuminado para Safari */
+  background-color: rgb(0, 0, 0); /* Totalmente transparente */
   padding-bottom: 1%;
   position: top;
   width: 100%;
@@ -27,8 +18,8 @@
 }
 
 .custom-navbar .nav-link {
-  font-family: 'Abyssinica SIL', serif;
-  font-size: 1.6rem;
+  font-family: 'lora', serif;
+  font-size: 1.7rem;
   color: #ffffff;
   margin-right: 30px;
   font-weight: 400;

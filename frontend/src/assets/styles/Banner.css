@@ -43,7 +43,7 @@
 
 
   .content h1 {
-    font-family: 'Junge', cursive;
+    font-family: 'Pro-text', cursive;
     font-size: 4rem;
     margin-bottom: 20px;
     text-shadow:1px 1px 1px rgb(255, 255, 255); 
@@ -54,6 +54,7 @@
     margin-bottom: 40px;
     text-shadow:0.5px 0.5px 0.5px rgb(255, 255, 255); 
     max-width: 70%;
+    font-family: Poppings-light;
   }
   
   .appointment-button {

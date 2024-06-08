@@ -12,12 +12,13 @@
 .my-work-section h2 {
     font-size: 5rem;
     margin-bottom: 1rem;
+    font-family: Pro-text;
 }
 
 .my-work-section p {
     font-size: 2rem;
     font-family: 'Inter', sans-serif;
-    font-weight: 300;
+    font-weight: lighter;
 }
 
 .slick-slide {

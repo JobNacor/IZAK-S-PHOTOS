@@ -7,9 +7,11 @@
 }
 
 .about-section h1 {
-    font-family:'Junge', cursive;
+    font-family:'Pro-text', cursive;
     font-size: 6rem;
-    margin-bottom: 30px
+    margin-bottom: 30px;
+    font-weight: lighter;
+    
     
 }
 

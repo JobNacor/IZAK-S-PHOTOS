@@ -23,24 +23,31 @@
 }
 
 .hero-section .text-section {
-    padding: 10% 5%;
+    padding: 8% 5%;
     z-index: 1;
 
 }
 
-.principal{
-    font-family: "Lora", serif;
-    font-weight: 100;
-    font-size: 7.0rem;
-    
+.principal {
+    font-family: "BALQIS", serif;
+    font-weight: lighter;
+    font-size: 10rem;
+    background: linear-gradient(to right, #fff5aa, #ffea8e, #e8d28f, #ffd37a); /* Gradiente de oro brillante */
+    -webkit-background-clip: text; /* Propiedad con prefijo para compatibilidad */
+    background-clip: text; /* Propiedad estándar */
+    -webkit-text-fill-color: transparent;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Sombra del texto */
+    position: relative;
+    filter: brightness(1.5);
+    line-height: 1.1; /* Ajusta la altura de línea */
+    letter-spacing: 3px;
 }
 
 .principal-text{
     font-family:"Inter", sans-serif;
     font-weight: 100;
-    font-size: 1.2rem;
-    margin-top: 0.5%;
-    max-width: 90%;
+    font-size: 1.3rem;
+    max-width: 100%;
 }
 
 
