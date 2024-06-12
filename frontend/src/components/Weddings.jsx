@@ -80,7 +80,11 @@ const Weddings = () => {
 const Info = () => (
   <div className="info">
     <h2 className="left">Wedding photography, wedding videography, and travel and lifestyle portfolio</h2>
-    <p className="right">We document weddings all over the world from small and intimate to lavish and luxurious. Our aim is always to be present and true to the event, capturing the essence of it, focusing on people, and using our creative vision to capture imagery that inspires and engages. Make sure to visit our journal to read some of our full stories.</p>
+    <p className="right">We document weddings all over the world from small and intimate 
+      to lavish and luxurious. Our aim is always to be present and true to the event, 
+      capturing the essence of it, focusing on people, and using our creative vision to 
+      capture imagery that inspires and engages. Make sure to visit our journal to read 
+      some of our full stories.</p>
   </div>
 );
 
@@ -91,13 +95,13 @@ const Gallery = () => (
       <div className="portfolio-item">
         <Link to="/wedding-photography">
           <img src="/src/assets/images/Gallery/gallery5.png" alt="Wedding Photography" />
-          <p>WEDDING PHOTOGRAPHY</p>
+          <p>PORTRAIT</p>
         </Link>
       </div>
       <div className="portfolio-item">
         <Link to="/wedding-videography">
           <img src="/src/assets/images/Gallery/gallery5.png" alt="Wedding Videography" />
-          <p>WEDDING VIDEOGRAPHY</p>
+          <p>DRON</p>
         </Link>
       </div>
       <div className="portfolio-item">
