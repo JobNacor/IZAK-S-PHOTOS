@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Abyssinica+SIL&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Junge&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+@font-face {
+    font-family: 'MiFuente';
+    src: url('../fonts/AbyssinicaSIL-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  .hero-section {
+    position: relative; /* Establece la posición relativa para poder posicionar la capa */
+    
+}
+body{
+    background-image: url('../images/Camera1.png');
+    background-repeat: no-repeat; 
+    background-position: calc(100% - 0px) calc(100% - -140px); 
+    background-size: 90%;
+}
+
+
+.hero-section::before {
+    content: ""; 
+    position: absolute; 
+    top: 0; 
+    left: 0; 
+    width: 60%; 
+    height: 110%; 
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0) 100%); /* Crea un degradado desde negro transparente hacia transparente */
+    z-index: 0; /* Asegura que la capa esté detrás del texto */
+}
+.hero-section .text-section {
+    padding: 13% 6%;
+    z-index: 10;
+
+}
+
+.principal{
+    font-family:'Junge', cursive;
+    font-size: 550%;
+    
+}
+
+.principal-text{
+    font-family:"Inter", sans-serif;
+    font-weight: 200;
+    font-size: 100%;
+    margin-top: 1%;
+    max-width: 70%;
+}
+
+.view{
+    margin-top: 2%;
+}
+
