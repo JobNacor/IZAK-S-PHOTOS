@@ -1,38 +1,49 @@
-@import url('https://fonts.googleapis.com/css2?family=Abyssinica+SIL&display=swap');
-@font-face {
-  font-family: 'MiFuente';
-  src: url('../fonts/AbyssinicaSIL-Regular.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
+.custom-navbar {
+  background: rgba(5, 5, 5, 0.86);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(16px);
+  padding: 0.85rem 0;
 }
 
+.custom-navbar .navbar-brand {
+  color: #ffffff;
+  font-family: "AbyssinicaLocal", Georgia, serif;
+  font-size: 1.35rem;
+}
 
-.custom-navbar {
-    background-color: #050505; 
-    padding-bottom: 1%;
-  }
-  
-  .custom-navbar .navbar-brand,
-  .custom-navbar .nav-link {
-    font-size: 1.5rem; 
-    color: #ffffff; 
-    margin-right: 20px;
-  }
-  
-  .custom-navbar .nav-link {
-    font-family: 'Abyssinica SIL', serif; 
-    font-size: 1.5rem;
-    color: #ffffff;
-    margin-right: 20px;
-    font-weight: 400;
-    font-style: normal;
-  }
-  
+.custom-navbar .navbar-brand:hover,
+.custom-navbar .navbar-brand:focus {
+  color: #ffffff;
+}
+
+.custom-navbar .navbar-toggler {
+  border-color: rgba(255, 255, 255, 0.28);
+}
+
+.custom-navbar .navbar-toggler:focus {
+  box-shadow: 0 0 0 0.16rem rgba(224, 184, 79, 0.35);
+}
+
+.custom-navbar .navbar-toggler-icon {
+  filter: invert(1);
+}
+
+.custom-navbar .nav-link {
+  color: rgba(255, 255, 255, 0.78);
+  font-size: 0.98rem;
+  font-weight: 600;
+  margin-left: 1.2rem;
+  padding-inline: 0;
+}
+
 .custom-navbar .nav-link:hover,
 .custom-navbar .nav-link:focus {
-  color: #FFDA55; 
+  color: #e0b84f;
 }
 
-.custom-navbar .nav-link:active {
-  color: #FFDA55; 
+@media (max-width: 991px) {
+  .custom-navbar .nav-link {
+    margin-left: 0;
+    padding: 0.75rem 0;
+  }
 }

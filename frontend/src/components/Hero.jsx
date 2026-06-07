@@ -1,20 +1,26 @@
-import React from 'react';
-import Camera1 from "../images/Camera1.png"
-import { Container, Row, Col, Button } from 'react-bootstrap';
-import "./Hero.css"
+import Camera1 from "../images/Camera1.png";
+import "./Hero.css";
+
 
 const HeroSection = () => {
   return (
-    <Container fluid className="hero-section" style={{ color: 'white',  }}>
-      <Row>
-        <Col md={6} className="text-section">
-          <h1 className='principal'>Capturing Moments</h1>
-          <p className='principal-text'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-          <Button variant="outline-light" className='view'>View Projects</Button>
-        </Col>
-      </Row>
-    </Container>
-    
+    <section
+      className="hero-section"
+      id="home"
+      style={{ "--hero-image": `url(${Camera1})` }}
+    >
+      <div className="hero-copy">
+        <p className="eyebrow">Photography portfolio</p>
+        <h1>Capturing honest moments with a refined visual edge.</h1>
+        <p>
+          Portrait, lifestyle, and creative photo sessions for people and brands
+          that want images with atmosphere, clarity, and intention.
+        </p>
+        <a href="#portfolio" className="view btn btn-light">
+          View Portfolio
+        </a>
+      </div>
+    </section>
   );
 };
 

@@ -1,19 +1,26 @@
-import "./Home.css"
-import React from 'react';
+import "./Home.css";
 import Hero from "./components/Hero";
-import Navbar from "./components/Navbar"; 
-import Containers from "./components/Containers"
+import Navbar from "./components/Navbar";
+import Containers from "./components/Containers";
+
 
 function IndexPage() {
   return (
-    <div>
-      <Navbar /> {/* Incluye el componente Navbar */}
-      {/* Otro contenido de la página */}
+    <>
+      <Navbar />
       <Hero />
-    </div>
+      <Containers />
+      <section className="contact-section" id="contact">
+        <div className="contact-content">
+          <p className="eyebrow">Bookings</p>
+          <h2>Ready for a clean, memorable photo session?</h2>
+          <a href="mailto:hello@example.com" className="contact-link">
+            hello@example.com
+          </a>
+        </div>
+      </section>
+    </>
   );
 }
 
 export default IndexPage;
-
-
