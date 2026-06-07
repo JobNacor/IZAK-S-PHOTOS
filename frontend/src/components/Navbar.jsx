@@ -1,16 +1,9 @@
+import { Menu, X } from "lucide-react";
 import { useEffect, useState } from "react";
+import { NavLink } from "react-router-dom";
 import { navItems } from "../data/portfolio";
 
-
-const MenuIcon = ({ open }) => (
-  <span className={`menu-icon ${open ? "is-open" : ""}`} aria-hidden="true">
-    <span />
-    <span />
-  </span>
-);
-
-
-function Navbar({ activeSection }) {
+function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
@@ -19,34 +12,32 @@ function Navbar({ activeSection }) {
     return () => document.body.classList.remove("menu-open");
   }, [menuOpen]);
 
-  const handleNavClick = () => setMenuOpen(false);
+  const closeMenu = () => setMenuOpen(false);
 
   return (
     <header className="site-header">
-      <a className="brand" href="#home" onClick={handleNavClick}>
+      <NavLink className="brand" to="/" onClick={closeMenu} aria-label="Izak's Photos home">
         <span className="brand-mark" aria-hidden="true" />
-        Izak&apos;s Photos
-      </a>
+        <span>Izak&apos;s Photos</span>
+      </NavLink>
 
       <nav className={`site-nav ${menuOpen ? "is-open" : ""}`} aria-label="Primary navigation">
-        {navItems.map((item) => {
-          const sectionId = item.href.replace("#", "");
-          return (
-            <a
-              href={item.href}
-              key={item.href}
-              className={activeSection === sectionId ? "is-active" : ""}
-              onClick={handleNavClick}
-            >
-              {item.label}
-            </a>
-          );
-        })}
+        {navItems.map((item) => (
+          <NavLink
+            end={item.path === "/"}
+            key={item.path}
+            to={item.path}
+            className={({ isActive }) => (isActive ? "is-active" : undefined)}
+            onClick={closeMenu}
+          >
+            {item.label}
+          </NavLink>
+        ))}
       </nav>
 
-      <a className="header-cta" href="#contact">
-        Book
-      </a>
+      <NavLink className="header-cta" to="/booking" onClick={closeMenu}>
+        Reserve
+      </NavLink>
 
       <button
         className="menu-button"
@@ -55,7 +46,7 @@ function Navbar({ activeSection }) {
         aria-expanded={menuOpen}
         onClick={() => setMenuOpen((current) => !current)}
       >
-        <MenuIcon open={menuOpen} />
+        {menuOpen ? <X size={20} strokeWidth={1.8} /> : <Menu size={20} strokeWidth={1.8} />}
       </button>
     </header>
   );
