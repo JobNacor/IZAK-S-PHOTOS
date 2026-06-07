@@ -31,13 +31,42 @@ def npm_command() -> str | None:
     return shutil.which("npm.cmd") or shutil.which("npm")
 
 
+def node_command() -> str | None:
+    candidates = [
+        Path.home()
+        / ".cache"
+        / "codex-runtimes"
+        / "codex-primary-runtime"
+        / "dependencies"
+        / "node"
+        / "bin"
+        / "node.exe",
+        shutil.which("node.exe"),
+        shutil.which("node"),
+    ]
+
+    for candidate in candidates:
+        if not candidate:
+            continue
+
+        command = str(candidate)
+        check = subprocess.run(
+            [command, "--version"],
+            text=True,
+            capture_output=True,
+        )
+        if check.returncode == 0:
+            return command
+
+    return None
+
+
 def frontend_command() -> list[str]:
-    vite_cmd = FRONTEND_DIR / "node_modules" / ".bin" / "vite.cmd"
-    vite_bin = FRONTEND_DIR / "node_modules" / ".bin" / "vite"
-    if vite_cmd.exists():
-        return [str(vite_cmd), "--host", "127.0.0.1", "--port", "5173"]
-    if vite_bin.exists():
-        return [str(vite_bin), "--host", "127.0.0.1", "--port", "5173"]
+    vite_js = FRONTEND_DIR / "node_modules" / "vite" / "bin" / "vite.js"
+    node = node_command()
+
+    if vite_js.exists() and node:
+        return [node, str(vite_js), "--host", "127.0.0.1", "--port", "5173"]
 
     npm = npm_command()
     if npm:

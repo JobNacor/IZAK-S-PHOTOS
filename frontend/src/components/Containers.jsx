@@ -1,34 +1,29 @@
-import { useEffect, useState } from "react";
-import { Col, Container, Row } from "react-bootstrap";
-import img1 from "../images/img1.jpg";
-import img2 from "../images/img2.jpg";
-import img3 from "../images/img3.jpg";
-import "./Containers.css";
+import { useEffect, useMemo, useState } from "react";
+import { portfolioCategories, works } from "../data/portfolio";
 
-
-const photos = [
-  {
-    src: img1,
-    title: "Editorial Portraits",
-    category: "Portrait",
-  },
-  {
-    src: img2,
-    title: "Lifestyle Stories",
-    category: "Lifestyle",
-  },
-  {
-    src: img3,
-    title: "Brand Details",
-    category: "Commercial",
-  },
-];
 
 const apiUrl = import.meta.env.VITE_API_URL || "http://127.0.0.1:8000/api";
 
 
-const ImageContainers = () => {
-  const [photoCards, setPhotoCards] = useState(photos);
+function mergeApiData(localWorks, apiWorks) {
+  if (!Array.isArray(apiWorks)) {
+    return localWorks;
+  }
+
+  const apiById = new Map(apiWorks.map((item) => [item.id, item]));
+
+  return localWorks.map((work) => ({
+    ...work,
+    ...apiById.get(work.id),
+    image: work.image,
+  }));
+}
+
+
+function Portfolio() {
+  const [activeCategory, setActiveCategory] = useState("All");
+  const [selectedId, setSelectedId] = useState(works[0].id);
+  const [portfolioWorks, setPortfolioWorks] = useState(works);
 
   useEffect(() => {
     let isMounted = true;
@@ -36,26 +31,18 @@ const ImageContainers = () => {
     fetch(`${apiUrl}/photos/`)
       .then((response) => {
         if (!response.ok) {
-          throw new Error("Unable to load photos");
+          throw new Error("Unable to load portfolio metadata");
         }
         return response.json();
       })
       .then((data) => {
-        if (!isMounted || !Array.isArray(data.results)) {
-          return;
+        if (isMounted) {
+          setPortfolioWorks(mergeApiData(works, data.results));
         }
-
-        setPhotoCards(
-          photos.map((photo, index) => ({
-            ...photo,
-            title: data.results[index]?.title || photo.title,
-            category: data.results[index]?.category || photo.category,
-          })),
-        );
       })
       .catch(() => {
         if (isMounted) {
-          setPhotoCards(photos);
+          setPortfolioWorks(works);
         }
       });
 
@@ -64,38 +51,96 @@ const ImageContainers = () => {
     };
   }, []);
 
+  const filteredWorks = useMemo(
+    () =>
+      activeCategory === "All"
+        ? portfolioWorks
+        : portfolioWorks.filter((work) => work.category === activeCategory),
+    [activeCategory, portfolioWorks],
+  );
+
+  useEffect(() => {
+    if (!filteredWorks.some((work) => work.id === selectedId)) {
+      setSelectedId(filteredWorks[0]?.id || works[0].id);
+    }
+  }, [filteredWorks, selectedId]);
+
+  const selectedWork =
+    portfolioWorks.find((work) => work.id === selectedId) || portfolioWorks[0];
+
   return (
-    <section className="portfolio-section" id="portfolio">
-      <Container>
-        <div className="section-heading">
-          <p className="eyebrow">Selected work</p>
-          <h2>Photography built around light, timing, and story.</h2>
+    <section className="portfolio-section section-shell" id="portfolio">
+      <div className="section-heading split-heading">
+        <div>
+          <span className="section-kicker">Portfolio</span>
+          <h2>Selected work. Real moments, artfully made.</h2>
         </div>
-        <Row className="g-4">
-          {photoCards.map((photo) => (
-            <Col md={4} key={photo.title}>
-              <article className="photo-card">
-                <img src={photo.src} alt={photo.title} />
-                <div className="photo-card-copy">
-                  <span>{photo.category}</span>
-                  <h3>{photo.title}</h3>
-                </div>
-              </article>
-            </Col>
-          ))}
-        </Row>
-        <div className="about-panel" id="about">
-          <p className="eyebrow">About</p>
-          <p>
-            Izak&apos;s Photos is a focused portfolio for portraits, lifestyle shoots,
-            and brand imagery. The site pairs a clean frontend with a Django API
-            foundation that is ready to grow into bookings, galleries, and client
-            delivery workflows.
-          </p>
+        <p>
+          Browse portrait, editorial, commercial, and event stories shaped with
+          intentional light and a calm production style.
+        </p>
+      </div>
+
+      <div className="category-tabs" role="tablist" aria-label="Portfolio categories">
+        {portfolioCategories.map((category) => (
+          <button
+            className={activeCategory === category ? "is-active" : ""}
+            type="button"
+            role="tab"
+            aria-selected={activeCategory === category}
+            key={category}
+            onClick={() => setActiveCategory(category)}
+          >
+            {category}
+          </button>
+        ))}
+      </div>
+
+      <div className="work-grid">
+        {filteredWorks.map((work) => (
+          <button
+            className={`work-tile work-${work.layout} ${
+              selectedId === work.id ? "is-selected" : ""
+            }`}
+            type="button"
+            key={work.id}
+            onClick={() => setSelectedId(work.id)}
+          >
+            <img src={work.image} alt={work.title} />
+            <span className="work-tile-overlay">
+              <small>{work.category}</small>
+              <strong>{work.title}</strong>
+            </span>
+          </button>
+        ))}
+      </div>
+
+      <article className="featured-work" aria-live="polite">
+        <div className="featured-copy">
+          <span className="section-kicker">Selected Project</span>
+          <h3>{selectedWork.title}</h3>
+          <p>{selectedWork.description}</p>
+          <dl>
+            <div>
+              <dt>Category</dt>
+              <dd>{selectedWork.category}</dd>
+            </div>
+            <div>
+              <dt>Location</dt>
+              <dd>{selectedWork.location}</dd>
+            </div>
+            <div>
+              <dt>Year</dt>
+              <dd>{selectedWork.year}</dd>
+            </div>
+          </dl>
         </div>
-      </Container>
+        <div className="featured-image">
+          <img src={selectedWork.image} alt="" />
+        </div>
+      </article>
     </section>
   );
-};
+}
 
-export default ImageContainers;
+export default Portfolio;

@@ -2,6 +2,14 @@
 
 A full-stack photography portfolio built with Django REST Framework and React/Vite. The project is organized so the backend API and frontend client can be started together from the repository root.
 
+## Features
+
+- Editorial photography homepage with responsive desktop and mobile layouts
+- Functional navigation for Home, Portfolio, About, Services, and Contact
+- Interactive portfolio category tabs and selected-project detail panel
+- Booking/contact form wired to a Django REST endpoint for local development
+- Project metadata served by the Django API with frontend image assets managed in React
+
 ## Tech Stack
 
 - Backend: Django, Django REST Framework, SQLite for local development
@@ -12,16 +20,16 @@ A full-stack photography portfolio built with Django REST Framework and React/Vi
 
 ```text
 IZAK-S-PHOTOS/
-├── backend/              # Django project and API app
-│   ├── api/              # API views, tests, app configuration
-│   ├── backend/          # Django settings, URLs, ASGI/WSGI
-│   └── manage.py
-├── frontend/             # React/Vite application
-│   └── src/
-├── scripts/
-│   └── dev.py            # Starts backend and frontend together
-├── requirements.txt      # Python dependencies
-└── package.json          # Root convenience scripts
+|-- backend/              # Django project and API app
+|   |-- api/              # API views, tests, app configuration
+|   |-- backend/          # Django settings, URLs, ASGI/WSGI
+|   `-- manage.py
+|-- frontend/             # React/Vite application
+|   `-- src/
+|-- scripts/
+|   `-- dev.py            # Starts backend and frontend together
+|-- requirements.txt      # Python dependencies
+`-- package.json          # Root convenience scripts
 ```
 
 ## Requirements
@@ -78,6 +86,7 @@ Default local URLs:
 - Backend: http://127.0.0.1:8000
 - API health check: http://127.0.0.1:8000/api/health/
 - Photos API: http://127.0.0.1:8000/api/photos/
+- Contact API: http://127.0.0.1:8000/api/contact/
 
 ## Backend Commands
 
