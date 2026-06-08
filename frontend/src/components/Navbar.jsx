@@ -1,26 +1,55 @@
-// src/components/Navbar.jsx
-import React from 'react';
-import { Container, Navbar, Nav } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
-import '../assets/styles/Navbar.css';
+import { Menu, X } from "lucide-react";
+import { useEffect, useState } from "react";
+import { NavLink } from "react-router-dom";
+import { navItems } from "../data/portfolio";
 
-const NavigationBar = () => {
+function Navbar() {
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  useEffect(() => {
+    document.body.classList.toggle("menu-open", menuOpen);
+
+    return () => document.body.classList.remove("menu-open");
+  }, [menuOpen]);
+
+  const closeMenu = () => setMenuOpen(false);
+
   return (
-    <Navbar expand="lg" className="custom-navbar">
-      <Container>
-        <Navbar.Brand as={Link} to="/" className="navbar-brand">ISAAC'S PHOTOS</Navbar.Brand>
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
-        <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="ms-auto">
-            <Nav.Link as={Link} to="/" id='Home'>Home</Nav.Link>
-            <Nav.Link as={Link} to="/portfolio">Portfolio</Nav.Link>
-            <Nav.Link as={Link} to="/Contact">Contact</Nav.Link>
-            <Nav.Link as={Link} to="/About">About</Nav.Link>
-          </Nav>
-        </Navbar.Collapse>
-      </Container>
-    </Navbar>
-  );
-};
+    <header className="site-header">
+      <NavLink className="brand" to="/" onClick={closeMenu} aria-label="Izak's Photos home">
+        <span className="brand-mark" aria-hidden="true" />
+        <span>Izak&apos;s Photos</span>
+      </NavLink>
 
-export default NavigationBar;
+      <nav className={`site-nav ${menuOpen ? "is-open" : ""}`} aria-label="Primary navigation">
+        {navItems.map((item) => (
+          <NavLink
+            end={item.path === "/"}
+            key={item.path}
+            to={item.path}
+            className={({ isActive }) => (isActive ? "is-active" : undefined)}
+            onClick={closeMenu}
+          >
+            {item.label}
+          </NavLink>
+        ))}
+      </nav>
+
+      <NavLink className="header-cta" to="/booking" onClick={closeMenu}>
+        Reserve
+      </NavLink>
+
+      <button
+        className="menu-button"
+        type="button"
+        aria-label={menuOpen ? "Close menu" : "Open menu"}
+        aria-expanded={menuOpen}
+        onClick={() => setMenuOpen((current) => !current)}
+      >
+        {menuOpen ? <X size={20} strokeWidth={1.8} /> : <Menu size={20} strokeWidth={1.8} />}
+      </button>
+    </header>
+  );
+}
+
+export default Navbar;

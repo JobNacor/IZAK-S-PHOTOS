@@ -1,24 +1,48 @@
-import React from 'react';
-import { Container, Row, Col, Button } from 'react-bootstrap';
-import '../assets/styles/Hero.css';
+import { about, works } from "../data/portfolio";
+import { ArrowDownIcon, ArrowRightIcon } from "./Icons";
 
-const HeroSection = () => {
+
+const heroWork = works.find((work) => work.id === "studio-language");
+
+
+function Hero() {
   return (
-    <Container fluid className="hero-section">
-      <Row className="align-items-center">
-        <Col md={6} className="text-section">
-          <h1 className="principal">Capturing Moments</h1>
-          <p className="principal-text">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+    <section className="hero-section" id="home" aria-labelledby="hero-title">
+      <div className="hero-content">
+        <div className="hero-copy">
+          <h1 id="hero-title">Portraits with presence. Stories with light.</h1>
+          <p>
+            Refined portrait, editorial, and event photography for people and
+            brands that want images with atmosphere, clarity, and intention.
           </p>
-          <Button variant="outline-light" className="view">View Projects</Button>
-        </Col>
-        <Col md={6} className="image-section">
-          {/* The image background is handled in CSS */}
-        </Col>
-      </Row>
-    </Container>
-  );
-};
+          <div className="hero-actions" aria-label="Primary actions">
+            <a href="#portfolio" className="button button-primary">
+              View Portfolio
+              <ArrowRightIcon />
+            </a>
+            <a href="#contact" className="button button-secondary">
+              Book a Session
+            </a>
+          </div>
+        </div>
 
-export default React.memo(HeroSection);
+        <div className="hero-media" aria-label="Featured portrait">
+          <img src={heroWork.image} alt={heroWork.title} />
+          <div className="hero-caption">
+            <span>{heroWork.category}</span>
+            <strong>{heroWork.title}</strong>
+          </div>
+        </div>
+      </div>
+
+      <a className="hero-scroll" href="#portfolio" aria-label="Scroll to portfolio">
+        Selected Work
+        <ArrowDownIcon />
+      </a>
+
+      <p className="hero-note">{about.intro}</p>
+    </section>
+  );
+}
+
+export default Hero;

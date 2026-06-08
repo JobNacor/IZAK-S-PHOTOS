@@ -1,24 +1,50 @@
-import React from 'react';
-import '../assets/styles/About.css';
-import Camera2 from '../assets/images/About/Camera2.png';
+import { about, processSteps } from "../data/portfolio";
 
-const About = () => {
+
+function About() {
   return (
-    <div className="about-section">
-      <div className="container">
-        <div className="row">
-          <div className="col-lg-6 col-md-12 text-section">
-            <h1>About</h1>
-            <p>We believe that every moment is a story waiting to be told, and we specialize in transforming these stories into captivating visual narratives. With a deep passion for the art of photography, we bring a unique blend of creativity and technical expertise to every project. Our team, led by Graphic Smith, is dedicated to capturing the essence of each moment, whether it's the joy of a wedding, the energy of an event, or the personality of a professional headshot.</p>
-            <p>At the heart of our philosophy is a commitment to excellence and a genuine connection with our clients. We don’t just take pictures; we create visual experiences that resonate. From conceptualization to the final frame, we work closely with our clients, ensuring that their vision is not only realized but surpassed. Discover the artistry and professionalism that define [Your Photography Business Name], where each click tells a story, and every story is a masterpiece.</p>
-          </div>
-          <div className="col-lg-6 col-md-12">
-            <img src={Camera2} alt="Camera" className="img-fluid2" />
-          </div>
+    <section className="about-section section-shell" id="about">
+      <div className="about-intro">
+        <div>
+          <span className="section-kicker">About</span>
+          <h2>Hello, I&apos;m Izak.</h2>
+          <p className="lead">{about.intro}</p>
+          <p>{about.body}</p>
         </div>
+        <figure className="about-image">
+          <img src={about.image} alt="Izak holding a camera in the studio" />
+        </figure>
       </div>
-    </div>
-  );
-};
 
-export default React.memo(About);
+      <div className="principles" aria-label="Photography principles">
+        <article>
+          <span aria-hidden="true">01</span>
+          <h3>Natural Light</h3>
+          <p>Available light and subtle shaping create timeless, authentic imagery.</p>
+        </article>
+        <article>
+          <span aria-hidden="true">02</span>
+          <h3>Real Connection</h3>
+          <p>Direction is calm and specific, so the subject never feels abandoned.</p>
+        </article>
+        <article>
+          <span aria-hidden="true">03</span>
+          <h3>Thoughtful Process</h3>
+          <p>From planning to delivery, every step is intentional and streamlined.</p>
+        </article>
+      </div>
+
+      <div className="process-row">
+        {processSteps.map((step) => (
+          <article key={step.number}>
+            <span>{step.number}</span>
+            <h3>{step.title}</h3>
+            <p>{step.description}</p>
+          </article>
+        ))}
+      </div>
+    </section>
+  );
+}
+
+export default About;

@@ -1,31 +1,47 @@
-// src/App.jsx
-import './assets/styles/App.css';
-import React from 'react';
-import { Routes, Route } from 'react-router-dom';
-import HomePage from './Pages/home-page';
-import Portfolio from './Pages/portfolio';
-import Contact from './Pages/Contact';
-import About from './Pages/About';
-import Weddings from './components/Weddings';
-import WeddingPhotography from './Pages/WeddingPhotography';
-import WeddingVideography from './Pages/WeddingVideography';
-import TravelLifestyle from './Pages/TravelLifestyle';
-import NavigationBar from './components/Navbar';
+import { useEffect } from "react";
+import { BrowserRouter, Navigate, Route, Routes, useLocation } from "react-router-dom";
+import Footer from "./components/Footer";
+import Navbar from "./components/Navbar";
+import AboutPage from "./pages/AboutPage";
+import BookingPage from "./pages/BookingPage";
+import HomePage from "./pages/HomePage";
+import ProjectsPage from "./pages/ProjectsPage";
 
-const App = () => (
-  <div>
-    <NavigationBar />
-    <Routes>
-      <Route path="/" element={<HomePage />} />
-      <Route path="/portfolio" element={<Portfolio />} />
-      <Route path="/Contact" element={<Contact />} />
-      <Route path="/About" element={<About />} />
-      <Route path="/weddings" element={<Weddings />} />
-      <Route path="/wedding-photography" element={<WeddingPhotography />} />
-      <Route path="/wedding-videography" element={<WeddingVideography />} />
-      <Route path="/travel-lifestyle" element={<TravelLifestyle />} />
-    </Routes>
-  </div>
-);
+function ScrollToTop() {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "auto" });
+  }, [pathname]);
+
+  return null;
+}
+
+function AppShell() {
+  return (
+    <>
+      <ScrollToTop />
+      <Navbar />
+      <main>
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/projects" element={<ProjectsPage />} />
+          <Route path="/about" element={<AboutPage />} />
+          <Route path="/booking" element={<BookingPage />} />
+          <Route path="*" element={<Navigate to="/" replace />} />
+        </Routes>
+      </main>
+      <Footer />
+    </>
+  );
+}
+
+function App() {
+  return (
+    <BrowserRouter future={{ v7_relativeSplatPath: true, v7_startTransition: true }}>
+      <AppShell />
+    </BrowserRouter>
+  );
+}
 
 export default App;
