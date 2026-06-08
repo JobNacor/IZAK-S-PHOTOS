@@ -1,0 +1,184 @@
+
+
+  .hero-section {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    background-image: url('../images/Hero/Camera1.png');
+    background-size: 90%;
+    background-position: top right;
+    color: white;
+    background-repeat: no-repeat;
+}
+
+.hero-section::before {
+    content: ""; 
+    position: absolute; 
+    top: 0; 
+    left: 0; 
+    width: 60%; 
+    height: 110%; 
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0) 100%); /* Crea un degradado desde negro transparente hacia transparente */
+    z-index: 0; /* Asegura que la capa esté detrás del texto */
+}
+
+.hero-section .text-section {
+    padding: 8% 5%;
+    z-index: 1;
+
+}
+
+.principal {
+    font-family: "BALQIS", serif;
+    font-weight: lighter;
+    font-size: 10rem;
+    background: linear-gradient(to right, #fff5aa, #ffea8e, #e8d28f, #ffd37a); /* Gradiente de oro brillante */
+    -webkit-background-clip: text; /* Propiedad con prefijo para compatibilidad */
+    background-clip: text; /* Propiedad estándar */
+    -webkit-text-fill-color: transparent;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Sombra del texto */
+    position: relative;
+    filter: brightness(2);
+    line-height: 1.1; /* Ajusta la altura de línea */
+    letter-spacing: 5px;
+}
+
+.principal-text{
+    font-family:"Inter", sans-serif;
+    font-weight: 100;
+    font-size: 1.3rem;
+    max-width: 100%;
+}
+
+
+.view {
+    margin-top: 1rem;
+    font-size: 2vw; 
+    padding: 0.5rem 2rem;
+    background-color: black;
+    color: white;
+    border-radius: 30px; 
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.view:hover {
+    background-color: white;
+    color: black;
+    transform: scale(1.05);
+}
+
+
+
+
+@media (max-width: 1460px) { 
+    .hero-section .text-section {
+        padding: 13% 6%;
+    }
+    .principal {
+        font-size: 5.5rem;
+    }
+    .principal-text {
+        font-size: 1rem;
+        max-width: 80%;
+    }
+    body {
+        background-size: 70%;
+        background-position: top right;
+    }
+    .view {
+        margin-top: 1rem;
+        font-size: 1.5vw; /* Ajuste con vw para mantener el tamaño relativo */
+    }
+}
+
+
+@media (max-width: 1230px) { 
+    .hero-section .text-section {
+        padding: 10% 3%;
+    }
+    .principal {
+        font-size: 5.5rem;
+    }
+    .principal-text {
+        font-size: 1rem;
+        max-width: 80%;
+    }
+    body {
+        background-size: 70%;
+        background-position: top right;
+    }
+    .view {
+        margin-top: 1rem;
+        font-size: 1.5vw; /* Ajuste con vw para mantener el tamaño relativo */
+    }
+}
+
+
+
+@media (max-width: 1050px) { 
+    .hero-section .text-section {
+        padding: 10% 5%;
+    }
+    .principal {
+        font-size: 4.5rem;
+    }
+    .principal-text {
+        font-size: 0.8rem;
+        max-width: 80%;
+    }
+    body {
+        background-size: 70%;
+        background-position: top right;
+    }
+    .view {
+        margin-top: 1rem;
+        font-size: 1.5vw; /* Ajuste con vw para mantener el tamaño relativo */
+    }
+}
+
+
+
+@media (max-width: 928px) { 
+    .hero-section .text-section {
+        padding: 10% 3%;
+    }
+    .principal {
+        font-size: 4rem;
+    }
+    .principal-text {
+        font-size: 0.8rem;
+        max-width: 90%;
+    }
+    body {
+        background-size: 70%;
+        background-position: top right;
+    }
+    .view {
+        margin-top: 0.5rem;
+        font-size: 1.5vw; /* Ajuste con vw para mantener el tamaño relativo */
+    }
+}
+
+
+
+@media (max-width: 775px) { 
+    .hero-section .text-section {
+        padding: 5% 3%;
+    }
+    .principal {
+        font-size: 3.5rem;
+    }
+    .principal-text {
+        font-size: 0.6rem;
+        max-width: 90%;
+    }
+    body {
+        background-size: 70%;
+        background-position: top right;
+    }
+    .view {
+        font-size: 1.5vw; /* Ajuste con vw para mantener el tamaño relativo */
+    }
+}
+

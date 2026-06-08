@@ -1,0 +1,48 @@
+
+
+@font-face {
+  font-family: 'BALQIS';
+  src: url('../fonts/BALQIS.ttf') format('truetype');
+}
+
+
+@font-face {
+  font-family: 'Pro-text';
+  src: url('../fonts/Pro-text.ttf') format('truetype');
+}
+
+
+
+@font-face {
+  font-family: 'Sf-light';
+  src: url('../fonts/sf-dispay-light.OTF') format('truetype');
+}
+
+
+
+@font-face {
+  font-family: 'Poppings-regular';
+  src: url('../fonts/Poppins-Regular.ttf') format('truetype');
+}
+
+
+@font-face {
+  font-family: 'Poppings-semibold';
+  src: url('../fonts/Poppins-SemiBold.ttf') format('truetype');
+}
+
+
+@font-face {
+  font-family: 'Poppings-light';
+  src: url('../fonts/Poppins-Light.ttf') format('truetype');
+}
+
+
+@font-face {
+  font-family: 'Poppings-extra';
+  src: url('../fonts/Poppins-ExtraLight.ttf') format('truetype');
+}
+
+body {
+    background-color: rgb(0, 0, 0) !important;
+  }

@@ -1,0 +1,109 @@
+.service-area {
+  margin-top: 5%;
+}
+
+.section-title {
+  margin-bottom: 80px; 
+}
+@media (max-width: 991px) {
+  .section-title {
+    margin-bottom: 40px; 
+  }
+}
+.section-title h3 {
+  font-weight: 300;
+  color: #d7d7d7;
+  font-size: 30px; /* Increased font size */
+  line-height: 28px;
+  text-transform: capitalize;
+  margin-bottom: 10px; 
+  font-family: Pro-text;
+}
+.section-title h2 {
+  font-size: 60px; /* Increased font size */
+  font-weight: 600;
+  text-transform: capitalize;
+  line-height: 70px; /* Increased line height */
+  color: #f3f3f3; 
+  font-family: Pro-text;
+}
+@media (max-width: 1024px) {
+  .section-title h2 {
+    font-size: 50px; /* Increased font size */
+  }
+}
+@media (max-width: 1024px) {
+  .section-title h2 {
+    font-size: 40px;
+    line-height: 45px; 
+  }
+}
+@media (max-width: 991px) {
+  .section-title h2 br {
+    display: none; 
+  }
+}
+.section-title h2 span {
+  position: relative;
+  z-index: 10; 
+}
+
+.service-area {
+  background: #000000;
+  padding-bottom: 120px; 
+}
+@media (max-width: 991px) {
+  .service-area {
+    padding-bottom: 50px; 
+  }
+}
+
+.single-service {
+  padding: 60px 50px; /* Increased padding */
+  background: #171717;
+  margin-bottom: 30px;
+  transition: all 0.3s ease 0s; 
+}
+@media (max-width: 1199px) {
+  .single-service {
+    padding: 50px 40px; /* Increased padding */
+  }
+}
+@media (max-width: 576px) {
+  .single-service {
+    text-align: center; 
+  }
+}
+.single-service i {
+  font-size: 50px; /* Increased font size */
+  color: #c9c9c9;
+  transition: all 0.3s ease 0s; 
+}
+.single-service h4 {
+  color: #e4e4e4;
+  font-size: 28px; /* Increased font size */
+  line-height: 35px; /* Increased line height */
+  font-family: Pro-text;
+}
+.single-service h4 span {
+  display: block; 
+}
+@media (max-width: 767px) {
+  .single-service h4 span {
+    display: inline-block; 
+  }
+}
+.single-service p {
+  margin-bottom: 0px;
+  color: #c9c9c9; 
+  font-family:Poppings-light ;
+}
+
+.single-service:hover {
+  transform: translateY(-6px);
+  box-shadow: 0px 20px 30px rgba(255, 255, 255, 0.336); 
+}
+
+.icon-spacing {
+  margin-right: 15px; /* Adjusted spacing */
+}
